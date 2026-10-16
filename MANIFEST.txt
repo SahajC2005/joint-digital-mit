@@ -1,0 +1,304 @@
+source: ~/Downloads/joint_digital_mit 2
+kept 145 files
+
+code/01_rebuild_F.py  <-  01_rebuild_F.py
+code/02_rebuild_G.py  <-  02_rebuild_G.py
+code/03_mundlak_reestimation.py  <-  03_mundlak_reestimation.py
+code/bam/maturation_forecast.py  <-  Bam/maturation_forecast.py
+code/bam/structural_inequality.py  <-  Bam/structural_inequality.py
+code/bspline3d.py  <-  bspline3d.py
+code/config/__init__.py  <-  config/__init__.py
+code/config/settings.py  <-  config/settings.py
+code/forecast_engine.py  <-  forecast_engine.py
+code/inequality_analysis.py  <-  inequality_analysis.py
+code/reframed_analysis.py  <-  reframed_analysis.py
+code/requirements.txt  <-  requirements.txt
+code/src/__init__.py  <-  src/__init__.py
+code/src/analysis/__init__.py  <-  src/analysis/__init__.py
+code/src/analysis/estimators.py  <-  src/analysis/estimators.py
+code/src/analysis/run_specifications.py  <-  src/analysis/run_specifications.py
+code/src/construct/__init__.py  <-  src/construct/__init__.py
+code/src/construct/ai_index.py  <-  src/construct/ai_index.py
+code/src/construct/fintech_index.py  <-  src/construct/fintech_index.py
+code/src/construct/mit_variables.py  <-  src/construct/mit_variables.py
+code/src/construct/panel_merge.py  <-  src/construct/panel_merge.py
+code/src/data/__init__.py  <-  src/data/__init__.py
+code/src/data/findex.py  <-  src/data/findex.py
+code/src/data/ilo_exposure.py  <-  src/data/ilo_exposure.py
+code/src/data/imf_aipi.py  <-  src/data/imf_aipi.py
+code/src/data/instruments.py  <-  src/data/instruments.py
+code/src/data/kis_share.py  <-  src/data/kis_share.py
+code/src/data/macro_controls.py  <-  src/data/macro_controls.py
+code/src/data/oxford_gari.py  <-  src/data/oxford_gari.py
+code/src/data/stanford_ai_index.py  <-  src/data/stanford_ai_index.py
+code/src/run_pipeline.py  <-  src/run_pipeline.py
+code/src/utils/__init__.py  <-  src/utils/__init__.py
+code/src/utils/country_codes.py  <-  src/utils/country_codes.py
+code/src/utils/data_helpers.py  <-  src/utils/data_helpers.py
+code/src/utils/logging_setup.py  <-  src/utils/logging_setup.py
+code/tests/__init__.py  <-  tests/__init__.py
+code/tests/test_integration.py  <-  tests/test_integration.py
+code/tests/test_utilities.py  <-  tests/test_utilities.py
+data/processed/final_panel (12).csv  <-  final_panel (12).csv
+data/processed/final_panel_F_rebuilt.csv  <-  final_panel_F_rebuilt.csv
+data/processed/final_panel_imputed (4).csv  <-  final_panel_imputed (4).csv
+data/processed/final_panel_imputed__5_.csv  <-  Bam/final_panel_imputed__5_.csv
+data/processed/long_panel_concentration.csv  <-  long_panel_concentration.csv
+data/processed/merged.csv  <-  merged.csv
+data/processed/panel (1).parquet  <-  panel (1).parquet
+data/processed/panel.parquet  <-  data_acquisition_output (3)/processed/panel.parquet
+data/processed/unified_panel.csv  <-  unified_panel.csv
+data/raw/10sd_jan15_2014.csv  <-  10sd_jan15_2014.csv
+data/raw/10sd_jan15_2014.xlsx  <-  10sd_jan15_2014.xlsx
+data/raw/2024-GAIRI-data.xlsx  <-  2024-GAIRI-data.xlsx
+data/raw/ADBI_Quality_Growth.pptx  <-  ADBI_Quality_Growth.pptx
+data/raw/AI Preparedness Index.csv  <-  AI Preparedness Index.csv
+data/raw/AI_scimago.csv  <-  AI_scimago.csv
+data/raw/Digital Infrastructure (Index).csv  <-  Digital Infrastructure (Index).csv
+data/raw/Final data for analysis.xlsx  <-  Final data for analysis.xlsx
+data/raw/Final data for analysis_stata.dta  <-  Final data for analysis_stata.dta
+data/raw/GARI_2024.xlsx  <-  GARI_2024.xlsx
+data/raw/Generation 2.xlsx  <-  Generation 2.xlsx
+data/raw/GlobalFindexDatabase2025.csv  <-  GlobalFindexDatabase2025.csv
+data/raw/Gneration 1 .xlsx  <-  Gneration 1 .xlsx
+data/raw/Human Capital and Labor Market Policies (Index).csv  <-  Human Capital and Labor Market Policies (Index).csv
+data/raw/IMF data.csv  <-  IMF data.csv
+data/raw/Innocation and Economic Integration (Index).csv  <-  Innocation and Economic Integration (Index).csv
+data/raw/Oxford GARI 2024 - Sheet1.csv  <-  Oxford GARI 2024 - Sheet1.csv
+data/raw/Regulation and Ethics (Index).csv  <-  Regulation and Ethics (Index).csv
+data/raw/data-noouS.csv  <-  data-noouS.csv
+data/raw/findex_2021_raw.csv  <-  data_acquisition_output/raw/findex_2021_raw.csv
+data/raw/findex_all_waves_raw.csv  <-  data_acquisition_output/raw/findex_all_waves_raw.csv
+data/raw/findex_components.csv  <-  data_acquisition_output (3)/raw/findex_components.csv
+data/raw/gari_2024.csv  <-  data_acquisition_output/raw/gari_2024.csv
+data/raw/ilo_rho_by_income.csv  <-  data_acquisition_output (3)/raw/ilo_rho_by_income.csv
+data/raw/ilostat_kis.csv  <-  data_acquisition_output (3)/raw/ilostat_kis.csv
+data/raw/imf-dm-export-20260607 (4).xls  <-  imf-dm-export-20260607 (4).xls
+data/raw/imf_aipi/AI Preparedness Index.csv  <-  data_acquisition_output/raw/imf_aipi/AI Preparedness Index.csv
+data/raw/imf_aipi/Digital Infrastructure (Index).csv  <-  data_acquisition_output/raw/imf_aipi/Digital Infrastructure (Index).csv
+data/raw/imf_aipi/Human Capital and Labor Market Policies (Index).csv  <-  data_acquisition_output/raw/imf_aipi/Human Capital and Labor Market Policies (Index).csv
+data/raw/imf_aipi/Innovation and Economic Integration (Index).csv  <-  data_acquisition_output/raw/imf_aipi/Innovation and Economic Integration (Index).csv
+data/raw/imf_aipi/Regulation and Ethics (Index).csv  <-  data_acquisition_output/raw/imf_aipi/Regulation and Ethics (Index).csv
+data/raw/income_groups_current.csv  <-  data_acquisition_output (3)/raw/income_groups_current.csv
+data/raw/income_groups_hist.csv  <-  data_acquisition_output (3)/raw/income_groups_hist.csv
+data/raw/inequality_forecast_summary.csv  <-  inequality_forecast_summary.csv
+data/raw/openalex_ai_pubs.csv  <-  data_acquisition_output (3)/raw/openalex_ai_pubs.csv
+data/raw/oxford_gari/GARI_2024.xlsx  <-  data_acquisition_output/raw/oxford_gari/GARI_2024.xlsx
+data/raw/oxford_gari/GARI_2024_report.pdf  <-  data_acquisition_output (3)/raw/oxford_gari/GARI_2024_report.pdf
+data/raw/pwt.csv  <-  data_acquisition_output (3)/raw/pwt.csv
+data/raw/wb_income/CLASS.xlsx  <-  data_acquisition_output (1)/raw/wb_income/CLASS.xlsx
+data/raw/wb_income/OGHIST.xlsx  <-  data_acquisition_output (3)/raw/wb_income/OGHIST.xlsx
+data/raw/wdi_controls.csv  <-  data_acquisition_output (3)/raw/wdi_controls.csv
+data/raw/wgi.csv  <-  data_acquisition_output (3)/raw/wgi.csv
+data/raw/wgi/wgidataset.xlsx  <-  data_acquisition_output (3)/raw/wgi/wgidataset.xlsx
+data/raw/wgidataset_with_sourcedata-2025.xlsx  <-  wgidataset_with_sourcedata-2025.xlsx
+data/raw/wid.csv  <-  wid.csv
+docs/IMPROVEMENT_PLAYBOOK.md  <-  IMPROVEMENT_PLAYBOOK.md
+docs/README.md  <-  README.md
+docs/derivations/FinTech_and_MIT.pdf  <-  PDF/FinTech_and_MIT.pdf
+docs/derivations/ai_inequality_top_earners.pdf  <-  PDF/ai_inequality_top_earners.pdf
+docs/derivations/concentration-engine-part3.pdf  <-  PDF/concentration-engine-part3.pdf
+docs/derivations/equations_with_inequality (1).pdf  <-  PDF/equations_with_inequality (1).pdf
+docs/derivations/full_inequality_equations.pdf  <-  PDF/full_inequality_equations.pdf
+docs/derivations/growth_interaction_informal_proof.pdf  <-  PDF/growth_interaction_informal_proof.pdf
+docs/derivations/inequality_equations.pdf  <-  PDF/inequality_equations.pdf
+docs/derivations/main (2).pdf  <-  PDF/main (2).pdf
+docs/derivations/mit_inequality.pdf  <-  PDF/mit_inequality.pdf
+docs/derivations/paper.pdf  <-  PDF/paper.pdf
+docs/derivations/softmax_to_ai_derivation.pdf  <-  PDF/softmax_to_ai_derivation.pdf
+docs/derivations/structural_transformation.pdf  <-  PDF/structural_transformation.pdf
+docs/derivations/topshare_derivation (4).pdf  <-  PDF/topshare_derivation (4).pdf
+docs/derivations/two_ingredients_notation.pdf  <-  PDF/two_ingredients_notation.pdf
+docs/derivations/unified_framework.pdf  <-  PDF/unified_framework.pdf
+docs/joint_digital_mit_report.md  <-  joint_digital_mit_report.md
+docs/model_overview_figure.tex  <-  model_overview_figure.tex
+docs/results_memo.md  <-  results_memo.md
+docs/table_escape_dividend.md  <-  table_escape_dividend.md
+docs/table_escape_dividend.tex  <-  table_escape_dividend.tex
+figures/fig_ai_validation.png  <-  fig_ai_validation.png
+figures/fig_dual_economy_map.png  <-  fig_dual_economy_map.png
+figures/fig_escape_dividend_stability.png  <-  fig_escape_dividend_stability.png
+figures/fig_income_fan.png  <-  fig_income_fan.png
+figures/fig_scenario_escape.png  <-  fig_scenario_escape.png
+notebooks/ISD_mechanisms_analysis.ipynb  <-  ISD_mechanisms_analysis.ipynb
+notebooks/NS_Constrained_AE_YieldCurve_FIXED_v6 (3).ipynb  <-  NS_Constrained_AE_YieldCurve_FIXED_v6 (3).ipynb
+notebooks/NS_Constrained_AE_YieldCurve_FIXED_v8b (1).ipynb  <-  NS_Constrained_AE_YieldCurve_FIXED_v8b (1).ipynb
+notebooks/RRRReeeaaaalllll_B_spline (1).ipynb  <-  RRRReeeaaaalllll_B_spline (1).ipynb
+notebooks/Spec6_Extended_Colab_(1) (1).ipynb  <-  Spec6_Extended_Colab_(1) (1).ipynb
+notebooks/Spec6_Extended_Colab_(1).ipynb  <-  Spec6_Extended_Colab_(1).ipynb
+notebooks/analysis_notebook (1).ipynb  <-  analysis_notebook (1).ipynb
+notebooks/data_acquisition_colab_(3).ipynb  <-  data_acquisition_colab_(3).ipynb
+notebooks/data_acquisition_colab_fixed (5).ipynb  <-  data_acquisition_colab_fixed (5).ipynb
+notebooks/inequality_colab.ipynb  <-  inequality_colab.ipynb
+notebooks/inequality_colab_full (3).ipynb  <-  inequality_colab_full (3).ipynb
+notebooks/joint_digital_improvement_colab (1).ipynb  <-  joint_digital_improvement_colab (1).ipynb
+notebooks/joint_digital_mit_analysis_(5).ipynb  <-  joint_digital_mit_analysis_(5).ipynb
+notebooks/joint_digital_mit_colab.ipynb  <-  joint_digital_mit_colab.ipynb
+notebooks/joint_digital_mit_experiment.ipynb  <-  joint_digital_mit_experiment.ipynb
+notebooks/longpanel_concentration_colab (4).ipynb  <-  longpanel_concentration_colab (4).ipynb
+notebooks/unified_framework_colab (1).ipynb  <-  unified_framework_colab (1).ipynb
+notebooks/upgrade_pipeline_colab.ipynb  <-  upgrade_pipeline_colab.ipynb
+outputs/bam/Bspline.html  <-  Bam/Bspline.html
+outputs/bam/fig_maturation_fan.png  <-  Bam/outputs/fig_maturation_fan.png
+outputs/bam/maturation_escape_summary.csv  <-  Bam/outputs/maturation_escape_summary.csv
+outputs/bam/tensor.html  <-  Bam/tensor.html
+outputs/inequality_results.txt  <-  inequality_results.txt
+outputs/logs/20260524_123814.log  <-  output/logs/20260524_123814.log
+outputs/logs/20260524_123845.log  <-  output/logs/20260524_123845.log
+outputs/logs/20260524_123916.log  <-  output/logs/20260524_123916.log
+
+
+EXCLUDED (153):
+[apple-numbers (xlsx kept)] 10sd_jan15_2014.numbers
+[byte-identical duplicate] 2024-GAIRI-data (1).xlsx
+[byte-identical duplicate] Final data for analysis (1).xlsx
+[byte-identical duplicate] Generation 2 (1).xlsx
+[byte-identical duplicate] GlobalFindexDatabase2025 (1).csv
+[byte-identical duplicate] GlobalFindexDatabase2025 (2).csv
+[byte-identical duplicate] Gneration 1  (1).xlsx
+[third-party paper] PDF/2209.00905v4.pdf
+[third-party paper] PDF/2312.05411v3.pdf
+[third-party paper] PDF/3c8e688538b350a73a8c1cd46056fc5a_MIT18_S096F13_lecnote15.pdf
+[third-party paper] PDF/ArtificialIntelligenceAndTheLaborMa_preview.pdf
+[third-party paper] PDF/Chapter5_Kernel_Methods_and_RBF_Networks.pdf
+[third-party paper] PDF/IDP000632_001 (1).pdf
+[third-party paper] PDF/IDP000632_001.pdf
+[third-party paper] PDF/Intergenrational_sustainability_projects_PPT-1.pdf
+[third-party paper] PDF/PINN.pdf
+[third-party paper] PDF/SDES-2019-2.pdf
+[third-party paper] PDF/Understanding DSGE Models_Costa Junior (2016).pdf
+[third-party paper] PDF/data_cheatsheet.pdf
+[byte-identical duplicate] PDF/equations_with_inequality (2).pdf
+[third-party paper] PDF/ldbench_pipeline (1).pdf
+[third-party paper] PDF/ldbench_pipeline.pdf
+[older version (kept main (2).pdf)] PDF/main (1).pdf
+[third-party paper] PDF/optimization_methods.pdf
+[third-party paper] PDF/s41467-024-45323-x (1).pdf
+[third-party paper] PDF/s41467-024-45323-x.pdf
+[older version (kept topshare_derivation (4).pdf)] PDF/topshare_derivation (1).pdf
+[older version (kept topshare_derivation (4).pdf)] PDF/topshare_derivation (2).pdf
+[older version (kept topshare_derivation (4).pdf)] PDF/topshare_derivation (3).pdf
+[older version (kept topshare_derivation (4).pdf)] PDF/topshare_derivation.pdf
+[older version (kept Spec6_Extended_Colab_(1).ipynb)] Spec6_Extended_Colab (1).ipynb
+[older version (kept Spec6_Extended_Colab_(1).ipynb)] Spec6_Extended_Colab.ipynb
+[archive] WID_Data_Metadata_15062026-115711.zip
+[older version (kept analysis_notebook (1).ipynb)] analysis_notebook.ipynb
+[older version (kept data_acquisition_colab_(3).ipynb)] data_acquisition_colab (1).ipynb
+[older version (kept data_acquisition_colab_(3).ipynb)] data_acquisition_colab (2).ipynb
+[older version (kept data_acquisition_colab_(3).ipynb)] data_acquisition_colab (3).ipynb
+[older version (kept data_acquisition_colab_(3).ipynb)] data_acquisition_colab.ipynb
+[older version (kept data_acquisition_colab_fixed (5).ipynb)] data_acquisition_colab_fixed (1).ipynb
+[older version (kept data_acquisition_colab_fixed (5).ipynb)] data_acquisition_colab_fixed (3).ipynb
+[older version (kept data_acquisition_colab_fixed (5).ipynb)] data_acquisition_colab_fixed (4).ipynb
+[older version (kept data_acquisition_colab_fixed (5).ipynb)] data_acquisition_colab_fixed (7).ipynb
+[older version (kept data_acquisition_colab_fixed (5).ipynb)] data_acquisition_colab_fixed (8).ipynb
+[older version (kept data_acquisition_colab_fixed (5).ipynb)] data_acquisition_colab_fixed.ipynb
+[older version (kept data_acquisition_colab_fixed (5).ipynb)] data_acquisition_colab_fixed_(6).ipynb
+[archive] data_acquisition_output (1).zip
+[older version (kept panel.parquet)] data_acquisition_output (1)/processed/panel.parquet
+[byte-identical duplicate] data_acquisition_output (1)/raw/findex_components.csv
+[byte-identical duplicate] data_acquisition_output (1)/raw/ilo_rho_by_income.csv
+[byte-identical duplicate] data_acquisition_output (1)/raw/ilostat_kis.csv
+[older version (kept income_groups_current.csv)] data_acquisition_output (1)/raw/income_groups_current.csv
+[older version (kept income_groups_hist.csv)] data_acquisition_output (1)/raw/income_groups_hist.csv
+[older version (kept openalex_ai_pubs.csv)] data_acquisition_output (1)/raw/openalex_ai_pubs.csv
+[older version (kept pwt.csv)] data_acquisition_output (1)/raw/pwt.csv
+[byte-identical duplicate] data_acquisition_output (1)/raw/wdi_controls.csv
+[older version (kept wgi.csv)] data_acquisition_output (1)/raw/wgi.csv
+[older version (kept wgidataset.xlsx)] data_acquisition_output (1)/raw/wgi/wgidataset.xlsx
+[archive] data_acquisition_output (2).zip
+[archive] data_acquisition_output (3).zip
+[archive] data_acquisition_output (4).zip
+[archive] data_acquisition_output (5).zip
+[archive] data_acquisition_output (6).zip
+[archive] data_acquisition_output.zip
+[byte-identical duplicate] data_acquisition_output/raw/ilo_rho_by_income.csv
+[older version (kept income_groups_current.csv)] data_acquisition_output/raw/income_groups_current.csv
+[older version (kept openalex_ai_pubs.csv)] data_acquisition_output/raw/openalex_ai_pubs.csv
+[older version (kept pwt.csv)] data_acquisition_output/raw/pwt.csv
+[byte-identical duplicate] data_acquisition_output/raw/wdi_controls.csv
+[older version (kept wgi.csv)] data_acquisition_output/raw/wgi.csv
+[older version (kept wgidataset.xlsx)] data_acquisition_output/raw/wgi/wgidataset.xlsx
+[byte-identical duplicate] fig_ai_validation (1).png
+[byte-identical duplicate] fig_dual_economy_map (1).png
+[archive] files (1).zip
+[archive] files (2).zip
+[older version (kept final_panel (12).csv)] final_panel (1).csv
+[older version (kept final_panel (12).csv)] final_panel (10).csv
+[older version (kept final_panel (12).csv)] final_panel (11).csv
+[older version (kept final_panel (12).csv)] final_panel (13).csv
+[older version (kept final_panel (12).csv)] final_panel (2).csv
+[older version (kept final_panel (12).csv)] final_panel (3).csv
+[older version (kept final_panel (12).csv)] final_panel (4).csv
+[older version (kept final_panel (12).csv)] final_panel (5).csv
+[older version (kept final_panel (12).csv)] final_panel (6).csv
+[older version (kept final_panel (12).csv)] final_panel (7).csv
+[older version (kept final_panel (12).csv)] final_panel (8).csv
+[older version (kept final_panel (12).csv)] final_panel (9).csv
+[older version (kept final_panel (12).csv)] final_panel.csv
+[older version (kept final_panel_imputed (4).csv)] final_panel_imputed (1).csv
+[older version (kept final_panel_imputed (4).csv)] final_panel_imputed (2).csv
+[older version (kept final_panel_imputed (4).csv)] final_panel_imputed (3).csv
+[older version (kept final_panel_imputed (4).csv)] final_panel_imputed.csv
+[older version (kept imf-dm-export-20260607 (4).xls)] imf-dm-export-20260607 (1).xls
+[older version (kept imf-dm-export-20260607 (4).xls)] imf-dm-export-20260607 (2).xls
+[older version (kept imf-dm-export-20260607 (4).xls)] imf-dm-export-20260607 (3).xls
+[older version (kept imf-dm-export-20260607 (4).xls)] imf-dm-export-20260607.xls
+[byte-identical duplicate] inequality_analysis (1).py
+[older version (kept inequality_colab_full (3).ipynb)] inequality_colab_full (1).ipynb
+[older version (kept inequality_colab_full (3).ipynb)] inequality_colab_full (2).ipynb
+[older version (kept inequality_colab_full (3).ipynb)] inequality_colab_full.ipynb
+[older version (kept joint_digital_improvement_colab (1).ipynb)] joint_digital_improvement_colab.ipynb
+[nested duplicate of src/config/tests] joint_digital_mit/README.md
+[nested duplicate of src/config/tests] joint_digital_mit/config/__init__.py
+[nested duplicate of src/config/tests] joint_digital_mit/config/settings.py
+[nested duplicate of src/config/tests] joint_digital_mit/output/logs/20260524_123814.log
+[nested duplicate of src/config/tests] joint_digital_mit/output/logs/20260524_123845.log
+[nested duplicate of src/config/tests] joint_digital_mit/output/logs/20260524_123916.log
+[nested duplicate of src/config/tests] joint_digital_mit/requirements.txt
+[nested duplicate of src/config/tests] joint_digital_mit/src/__init__.py
+[nested duplicate of src/config/tests] joint_digital_mit/src/analysis/__init__.py
+[nested duplicate of src/config/tests] joint_digital_mit/src/analysis/estimators.py
+[nested duplicate of src/config/tests] joint_digital_mit/src/analysis/run_specifications.py
+[nested duplicate of src/config/tests] joint_digital_mit/src/construct/__init__.py
+[nested duplicate of src/config/tests] joint_digital_mit/src/construct/ai_index.py
+[nested duplicate of src/config/tests] joint_digital_mit/src/construct/fintech_index.py
+[nested duplicate of src/config/tests] joint_digital_mit/src/construct/mit_variables.py
+[nested duplicate of src/config/tests] joint_digital_mit/src/construct/panel_merge.py
+[nested duplicate of src/config/tests] joint_digital_mit/src/data/__init__.py
+[nested duplicate of src/config/tests] joint_digital_mit/src/data/findex.py
+[nested duplicate of src/config/tests] joint_digital_mit/src/data/ilo_exposure.py
+[nested duplicate of src/config/tests] joint_digital_mit/src/data/imf_aipi.py
+[nested duplicate of src/config/tests] joint_digital_mit/src/data/instruments.py
+[nested duplicate of src/config/tests] joint_digital_mit/src/data/kis_share.py
+[nested duplicate of src/config/tests] joint_digital_mit/src/data/macro_controls.py
+[nested duplicate of src/config/tests] joint_digital_mit/src/data/oxford_gari.py
+[nested duplicate of src/config/tests] joint_digital_mit/src/data/stanford_ai_index.py
+[nested duplicate of src/config/tests] joint_digital_mit/src/run_pipeline.py
+[nested duplicate of src/config/tests] joint_digital_mit/src/utils/__init__.py
+[nested duplicate of src/config/tests] joint_digital_mit/src/utils/country_codes.py
+[nested duplicate of src/config/tests] joint_digital_mit/src/utils/data_helpers.py
+[nested duplicate of src/config/tests] joint_digital_mit/src/utils/logging_setup.py
+[nested duplicate of src/config/tests] joint_digital_mit/tests/__init__.py
+[nested duplicate of src/config/tests] joint_digital_mit/tests/test_integration.py
+[nested duplicate of src/config/tests] joint_digital_mit/tests/test_utilities.py
+[older version (kept joint_digital_mit_analysis_(5).ipynb)] joint_digital_mit_analysis (1).ipynb
+[older version (kept joint_digital_mit_analysis_(5).ipynb)] joint_digital_mit_analysis (2).ipynb
+[older version (kept joint_digital_mit_analysis_(5).ipynb)] joint_digital_mit_analysis (3).ipynb
+[older version (kept joint_digital_mit_analysis_(5).ipynb)] joint_digital_mit_analysis (4).ipynb
+[older version (kept joint_digital_mit_analysis_(5).ipynb)] joint_digital_mit_analysis (5).ipynb
+[older version (kept joint_digital_mit_analysis_(5).ipynb)] joint_digital_mit_analysis.ipynb
+[older version (kept joint_digital_mit_analysis_(5).ipynb)] joint_digital_mit_analysis_(3).ipynb
+[byte-identical duplicate] joint_digital_mit_experiment (1).ipynb
+[archive] joint_digital_mit_skeleton (1).tar.gz
+[archive] joint_digital_mit_skeleton.tar.gz
+[byte-identical duplicate] long_panel_concentration (1).csv
+[byte-identical duplicate] long_panel_concentration (2).csv
+[byte-identical duplicate] long_panel_concentration (3).csv
+[older version (kept longpanel_concentration_colab (4).ipynb)] longpanel_concentration_colab (1).ipynb
+[older version (kept longpanel_concentration_colab (4).ipynb)] longpanel_concentration_colab (2).ipynb
+[older version (kept longpanel_concentration_colab (4).ipynb)] longpanel_concentration_colab (3).ipynb
+[older version (kept panel (1).parquet)] panel.parquet
+[apple-numbers (xlsx kept)] pwt110 (2).numbers
+[older version (kept unified_framework_colab (1).ipynb)] unified_framework_colab.ipynb
+[byte-identical duplicate] wid (1).csv

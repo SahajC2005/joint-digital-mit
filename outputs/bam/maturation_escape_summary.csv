@@ -1,0 +1,5 @@
+scenario,mean_P_escape_MI,median_P_escape_MI
+Conservative (no maturation),0.21245614035087718,0.0
+"Joint push, no maturation",0.21587719298245617,0.0
+Joint push + GPT maturation (mid),0.23614035087719298,0.00125
+Joint push + GPT maturation (high),0.25921052631578945,0.00125

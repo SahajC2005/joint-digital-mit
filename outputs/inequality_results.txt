@@ -1,0 +1,50 @@
+########################################################################
+# PART A — STRUCTURAL INEQUALITY (the dual economy)
+########################################################################
+Middle-income countries ranked by structural inequality (top 12 of 63):
+   MUS  DualGap=0.0616  (H=0.36, services=0.096)
+   ARG  DualGap=0.0433  (H=0.48, services=0.083)
+   COL  DualGap=0.0402  (H=0.35, services=0.063)
+   MEX  DualGap=0.0397  (H=0.40, services=0.066)
+   SWZ  DualGap=0.0375  (H=0.28, services=0.052)
+   SRB  DualGap=0.0372  (H=0.58, services=0.088)
+   KAZ  DualGap=0.0369  (H=0.46, services=0.068)
+   BRA  DualGap=0.0349  (H=0.50, services=0.071)
+   MYS  DualGap=0.0341  (H=0.47, services=0.065)
+   TUR  DualGap=0.0338  (H=0.34, services=0.052)
+   DOM  DualGap=0.0302  (H=0.40, services=0.051)
+   JAM  DualGap=0.0302  (H=0.35, services=0.046)
+
+########################################################################
+# PART B — DISPLACEMENT INEQUALITY (people pushed out)
+########################################################################
+Does the displacement metric MOVE within country? (vs Gini)
+   gini_disp  within/between = 0.071  frozen
+   D_term     within/between = 0.050  frozen
+   Dexp       within/between = 0.166  MOVES
+   within-country corr(displacement, AI) = +0.88  (exposure index, not AI-independent)
+
+Displacement drag on growth (Spec 3'): theory wants Dexp_l < 0
+   FG_l     +0.7703  se=0.358  p=0.032 **
+   Dexp_l   -6.1543  se=7.336  p=0.402 
+   Dexp -> slowdown: +0.6436  p=0.546  (positive = more risk)
+   READ: signs are theory-consistent (drag<0, slowdown>0) but insignificant —
+   displacement is ~0.9 collinear with AI, so it cannot be separated from the AI effect.
+
+########################################################################
+# PART C1 — DOES AI CREATE INEQUALITY?  (AI -> Gini)
+########################################################################
+   gini_disp: WITHIN  G=-0.0081 p=0.624  | skill-bias GxlowH=-0.0012 p=0.954
+   gini_disp: BETWEEN G=-0.0281 p=0.002 *** (negative = AI countries less unequal; confounded by development)
+   gini: WITHIN  G=-0.0110 p=0.453  | skill-bias GxlowH=+0.0044 p=0.818
+   gini: BETWEEN G=-0.0300 p=0.001 *** (negative = AI countries less unequal; confounded by development)
+   ceiling: Gini within/between=0.071 -> within test underpowered by construction.
+   VERDICT: data do NOT show AI creating income inequality (within null; between wrong-signed).
+
+########################################################################
+# PART C2 — CLEAN TEST on LABOR SHARE (non-circular, AI-independent)
+########################################################################
+   [scaffold idle] add a 'labsh' column (PWT labor share of income).
+   Labor share MOVES year-to-year and is NOT built from AI, so AI->labor-share is the
+   non-circular test of 'AI creates inequality'. Source: PWT 10.01 variable 'labsh'.
+   Then this block runs automatically and gives a clean, publishable answer.

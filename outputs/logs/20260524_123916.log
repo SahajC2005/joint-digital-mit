@@ -1,0 +1,11 @@
+2026-05-24 12:39:16,406 | src.utils.data_helpers | INFO | pca_index: 1st component explains 98.1% of variance
+2026-05-24 12:39:16,406 | src.construct.fintech_index | INFO | FinTech PCA diagnostics: {'variance_explained': 0.9806858850457699, 'loadings': {'findex_dp': 0.5001803381044595, 'findex_ma': 0.4985822291645913, 'findex_mp': 0.5010903322966052, 'findex_da': 0.5001438483215139}, 'n_obs_fitted': 20}
+2026-05-24 12:39:16,433 | src.utils.data_helpers | INFO | pca_index: 1st component explains 92.2% of variance
+2026-05-24 12:39:16,434 | src.construct.ai_index | INFO | AI index PCA diagnostics: {'variance_explained': 0.9218017525545064, 'loadings': {'gari_government': 0.31184106809911283, 'gari_tech_sector': 0.3091346725340099, 'gari_data_infra': 0.3105387423336686, 'ai_pubs_pc': 0.276056880533708, 'ai_patents_pc': 0.265601586577956, 'ai_investment': 0.29624169414475615, 'ai_workforce': 0.3113343222390904, 'aipi_digital_infra': 0.30990153421807615, 'aipi_human_capital': 0.3076253580118976, 'aipi_innovation': 0.30629237579726076, 'aipi_regulation': 0.3079438992465401}, 'n_obs_fitted': 20}
+2026-05-24 12:39:16,446 | src.construct.ai_index | WARNING | AI index: missing columns {'ai_investment', 'ai_patents_pc', 'ai_pubs_pc', 'ai_workforce'}; pillar will use available only
+2026-05-24 12:39:16,451 | src.construct.ai_index | ERROR | pillar activity has no components; G will be biased
+2026-05-24 12:39:16,457 | src.utils.data_helpers | INFO | pca_index: 1st component explains 98.1% of variance
+2026-05-24 12:39:16,457 | src.construct.ai_index | INFO | AI index PCA diagnostics: {'variance_explained': 0.9806486130748988, 'loadings': {'gari_government': 0.37978217721412366, 'gari_tech_sector': 0.3780597968171222, 'gari_data_infra': 0.37768060495234956, 'aipi_digital_infra': 0.3774074236077719, 'aipi_human_capital': 0.37704640481222246, 'aipi_innovation': 0.37715409637456426, 'aipi_regulation': 0.37861336658355094}, 'n_obs_fitted': 20}
+2026-05-24 12:39:16,477 | src.utils.country_codes | INFO | [test] dropping 3 aggregate/historical entries
+2026-05-24 12:39:16,492 | src.utils.data_helpers | INFO | pca_index: 1st component explains 98.9% of variance
+2026-05-24 12:39:16,503 | src.utils.country_codes | ERROR | panel has 1 duplicate (iso3, year) rows

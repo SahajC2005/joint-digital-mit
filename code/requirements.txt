@@ -1,0 +1,29 @@
+# Core data
+pandas==2.2.2
+numpy==1.26.4
+pyarrow==15.0.2
+
+# Statistics and econometrics
+statsmodels==0.14.1
+linearmodels==6.0       # panel, IV, system GMM
+scikit-learn==1.4.2     # PCA for index robustness
+scipy==1.13.0
+
+# Country code harmonization
+country-converter==1.2.0
+pycountry==23.12.11
+
+# Data acquisition
+requests==2.31.0
+openpyxl==3.1.2
+wbdata==1.0.0           # World Bank API
+pandasdmx==1.11.0       # ILOSTAT and other SDMX APIs
+
+# Output
+matplotlib==3.8.4
+seaborn==0.13.2
+stargazer==0.0.7        # publication-quality tables
+
+# Reproducibility
+pyyaml==6.0.1
+python-dotenv==1.0.1

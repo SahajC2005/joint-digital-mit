@@ -1,0 +1,3 @@
+2026-05-24 12:38:15,950 | src.utils.country_codes | INFO | [test] dropping 3 aggregate/historical entries
+2026-05-24 12:38:15,968 | src.utils.data_helpers | INFO | pca_index: 1st component explains 98.9% of variance
+2026-05-24 12:38:15,982 | src.utils.country_codes | ERROR | panel has 1 duplicate (iso3, year) rows
