@@ -51,7 +51,7 @@ data/processed/unified_panel.csv  <-  unified_panel.csv
 data/raw/10sd_jan15_2014.csv  <-  10sd_jan15_2014.csv
 data/raw/10sd_jan15_2014.xlsx  <-  10sd_jan15_2014.xlsx
 data/raw/2024-GAIRI-data.xlsx  <-  2024-GAIRI-data.xlsx
-data/raw/ADBI_Quality_Growth.pptx  <-  ADBI_Quality_Growth.pptx
+[removed 2026-10-19] ADBI_Quality_Growth.pptx  <-  ADBI_Quality_Growth.pptx  (untracked on request; the file is still on disk at docs/ and in ~/Downloads/joint_digital_mit 2/, and remains in history at commit 75f692c)
 data/raw/AI Preparedness Index.csv  <-  AI Preparedness Index.csv
 data/raw/AI_scimago.csv  <-  AI_scimago.csv
 data/raw/Digital Infrastructure (Index).csv  <-  Digital Infrastructure (Index).csv

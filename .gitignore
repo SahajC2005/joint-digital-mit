@@ -7,3 +7,6 @@ __pycache__/
 .venv/
 venv/
 .ipynb_checkpoints/
+
+# project documents kept out of the repository
+docs/ADBI_Quality_Growth.pptx
