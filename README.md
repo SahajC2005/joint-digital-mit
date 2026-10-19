@@ -27,7 +27,7 @@ MANIFEST.txt every file's original path, and every excluded file with the reason
 |---|---|
 | `docs/RERUN_NOTES.md` | **the re-run: which published numbers reproduce on this data and which do not — read this first** |
 | `docs/joint_digital_mit_report.md` | the full empirical findings report |
-| `docs/results_memo.md` | later one-page summary of headline numbers |
+| `docs/results_memo.md` | one-page summary, rewritten against the re-run: verified / revised / still unverified |
 | `docs/IMPROVEMENT_PLAYBOOK.md` | diagnosis of the identification problem + the fixes, with data links |
 | `docs/README.md` | the original replication-package README (pipeline stages) |
 | `outputs/inequality_results.txt` | raw output of the inequality/dual-economy battery |
