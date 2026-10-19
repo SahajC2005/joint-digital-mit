@@ -14,7 +14,7 @@ country-clustered standard errors.
 code/        pipeline (src/), rebuild + re-estimation scripts, Bam/ forecasting
 notebooks/   Colab/analysis notebooks (one copy each, newest kept)
 data/raw/    source data: Findex, PWT, WGI, WDI, ILO, OpenAlex, IMF AIPI, Oxford GARI
-data/processed/  constructed panels (final_panel, panel.parquet, unified_panel, ...)
+data/processed/  constructed panels (panel_merged -> panel_imputed -> panel_estimation)
 docs/        report, results memo, improvement playbook, derivations/ (PDF)
 figures/     paper figures
 outputs/     estimation logs, inequality results, Bam forecast outputs
@@ -164,6 +164,76 @@ can be quoted as written**; the earlier instruction not to is withdrawn. §4 fai
 the report says it does.
 
 Two defects in the committed code were found on the way and are documented in the notes:
-`03_mundlak_reestimation.py` points at `final_panel_imputed.csv`, which lacks every regressor
+`03_mundlak_reestimation.py` pointed at the imputed panel, which lacks every regressor
 it uses, and the exit risk set must condition on `MI_l == 1` (conditioning on `MI == 1` yields
 zero events, because `Exit` is coded on the post-transition row).
+
+---
+
+## File naming (2026-10-19)
+
+Every data file is now named for what it holds. The estimation path reads
+**`panel_merged` → `panel_imputed` → `panel_estimation`**, and `panel_estimation.csv` is the
+file all of `code/04`–`code/06` use. Renaming changed no contents: the three scripts were
+re-run afterwards and reproduce their committed outputs.
+
+### data/processed/
+
+| was | now | what it is |
+|---|---|---|
+| `final_panel.csv` | `panel_merged.csv` | 3,474 × 42, 246 economies — the merged panel before sample hygiene |
+| `panel (1).parquet` | `panel_merged_full.parquet` | the same 42 columns in parquet; `panel.parquet` is an earlier 33-column cut, kept under its own name because the pipeline writes it |
+| `final_panel_imputed.csv` | `panel_imputed.csv` | 3,255 × 50, 217 economies — after hygiene and the Kalman fill, before any construction |
+| `final_panel_imputed__5_.csv` | **`panel_estimation.csv`** | 3,255 × 139 — the estimation panel, with F, G, FG, MI, the lags and every constructed interaction |
+| `merged.csv` | `panel_estimation_with_top_shares.csv` | 3,255 × 149 — the above plus the WID top-share columns |
+| `unified_panel.csv` | `panel_estimation_unified.csv` | 3,255 × 170 — the widest superset |
+| `long_panel_concentration.csv` | `panel_long_1980_2024_top_shares.csv` | 5,893 × 31, 153 economies, 1980–2024 — the long-panel concentration stress test |
+| `final_panel_F_rebuilt.csv` | `F_rebuild_interpolation_grid.csv` | 10,424 × 147 — **not a panel**: 11–13 rows per country-year, varying only in F, FG, F_l, FG_l. An interpolation grid, or a merge that fanned out |
+
+### data/raw/
+
+| was | now |
+|---|---|
+| `10sd_jan15_2014.csv` / `.xlsx` | `ggdc_10_sector_2014.csv` / `.xlsx` (GGDC 10-Sector Database, Jan 2014) |
+| `AI_scimago.csv` | `scimago_ai_publications.csv` |
+| `IMF data.csv` | `imf_financial_access_survey.csv` (IMF FAS, wide export) |
+| `imf-dm-export-20260607.xls` | `imf_datamapper_export_20260607.xls` |
+| `data-noouS.csv` | `ilo_ai_exposure_gradients_by_income.csv` |
+| `ilo_rho_by_income.csv` | `ilo_ai_exposure_by_income_group.csv` |
+| `Oxford GARI 2024 - Sheet1.csv` | `oxford_gari_2024_pillars.csv` |
+| `gari_2024.csv` | `oxford_gari_2024_totals.csv` |
+| `findex_components.csv` | `findex_account_ownership.csv` — it holds **one** component, not four |
+| `pwt.csv` | `pwt_human_capital.csv` — one column, `human_capital_pwt` |
+| `wid.csv` | `wid_top_shares.csv` |
+| `wgidataset_with_sourcedata-2025.xlsx` | `wgi_2025_with_source_data.xlsx` |
+| `inequality_forecast_summary.csv` | `bam_inequality_forecast_summary.csv` — a Bam *output* sitting in `raw/` |
+
+### notebooks/
+
+`NS_Constrained_AE_YieldCurve_FIXED_v6/v8b` → `nelson_siegel_autoencoder_v6/v8b`,
+`RRRReeeaaaalllll_B_spline` → `knottransformer_bspline_phase2`,
+`Spec6_Extended_Colab_(1)` → `_v2`, `data_acquisition_colab_fixed` → `_v2`.
+**Filenames written inside the notebooks were left untouched**, so their stored cell outputs
+stay exactly as they were when the §4 specifications were recovered from them.
+`MANIFEST.txt` keeps each file's original `~/Downloads` path, so the trail is unbroken.
+
+## Found while renaming — not acted on
+
+Reading every file to name it turned up four things worth a decision:
+
+1. **Four files belong to another project.** `lab_experiment_svo_responses.xlsx` / `.dta`
+   (399 rows: `section`, `Treatment`, `final_amount`, `mechanism`, `svo1`, `svo2`, `T1`–`T3_5`,
+   `sex`) and `lab_experiment_generation1/2.xlsx` (Japanese/English sheet pairs from a
+   `yang_generation` folder) are a behavioural-economics lab experiment, not a country panel.
+   `notebooks/ISD_mechanisms_analysis.ipynb` (Intergenerational Sustainability Dilemma) and the
+   Nelson-Siegel and B-spline notebooks are likewise adjacent work. They were renamed honestly
+   but left in place.
+2. **Seven byte-identical duplicates.** The five IMF AIPI CSVs exist both in `data/raw/` and in
+   `data/raw/imf_aipi/` (the root copy of one is misspelled `Innocation`), and the Oxford GARI
+   workbook exists three times: `2024-GAIRI-data.xlsx`, `GARI_2024.xlsx` and
+   `oxford_gari/GARI_2024.xlsx`. Nothing was deleted.
+3. **`imf_datamapper_export_20260607.xls` does not open** — `CompDocError: Workbook corruption`.
+   Re-download it or drop it.
+4. **`F_rebuild_interpolation_grid.csv` is not usable as a panel**, per the table above. Note
+   that `code/01_rebuild_F.py` is still an unrun template reading placeholder filenames, so
+   whatever produced that file is not the committed script.

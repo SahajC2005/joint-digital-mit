@@ -24,8 +24,8 @@ import numpy as np, pandas as pd
 
 GARI_CSV    = "gari_panel.csv"      # stacked vintages: iso3, year, gari_total
 PATENTS_CSV = "ai_patents.csv"      # iso3, year, ai_patents
-PANEL_CSV   = "final_panel_imputed.csv"
-OUT_CSV     = "final_panel_G_rebuilt.csv"
+PANEL_CSV   = "panel_imputed.csv"
+OUT_CSV     = "G_rebuild_panel.csv"
 
 def z(s):
     s = pd.to_numeric(s, errors="coerce"); return (s - s.mean()) / s.std()

@@ -38,7 +38,7 @@ import matplotlib; matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 rng = np.random.default_rng(7)
-PANEL      = Path("final_panel_imputed__5_.csv")
+PANEL      = Path("panel_estimation.csv")
 ESCAPE_PPP = 26000
 LAST_YEAR  = 2024
 HORIZON    = 2045

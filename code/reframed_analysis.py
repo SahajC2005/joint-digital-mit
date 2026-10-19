@@ -33,7 +33,7 @@ from linearmodels.iv import IV2SLS
 import statsmodels.formula.api as smf
 
 # ------------------------------------------------------------------ PATHS / CONFIG
-PANEL = Path("final_panel_imputed__5_.csv")     # adjust to your path
+PANEL = Path("panel_estimation.csv")     # adjust to your path
 # Name of a historical-Gini column IF you add one (Gini ~1980, or land Gini).
 HIST_GINI_COL = "gini_1980"                     # leave as-is; script checks if present
 SHOCK_YEAR    = 2017                            # global AI take-off used for Bartik shock

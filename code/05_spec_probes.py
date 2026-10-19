@@ -21,7 +21,7 @@ warnings.filterwarnings("ignore")
 from linearmodels.panel import PanelOLS, BetweenOLS
 
 ROOT = Path(__file__).resolve().parent.parent
-d = pd.read_csv(ROOT / "data" / "processed" / "final_panel_imputed__5_.csv",
+d = pd.read_csv(ROOT / "data" / "processed" / "panel_estimation.csv",
                 low_memory=False).sort_values(["iso3", "year"])
 P = d.set_index(["iso3", "year"])
 

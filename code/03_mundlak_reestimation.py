@@ -1,6 +1,6 @@
 """
 Mundlak / Correlated-Random-Effects re-estimation of the F x G complementarity.
-Runs on the EXISTING panel (final_panel_imputed.csv) -- no new data needed.
+Runs on the EXISTING panel (panel_imputed.csv) -- no new data needed.
 
 Decomposes beta3 (F x G) and delta4 (F x G x MI) into WITHIN-country and
 BETWEEN-country effects, and tests whether they differ. This is the cheapest
@@ -13,7 +13,7 @@ warnings.filterwarnings("ignore")
 from linearmodels.panel import PanelOLS, RandomEffects
 import pycountry_convert as pc
 
-CSV = "final_panel_imputed.csv"          # <-- point at your panel
+CSV = "panel_imputed.csv"          # <-- point at your panel
 df = pd.read_csv(CSV)
 
 CONTROLS = ["log_gdp","trade_pct_gdp","inflation","investment_pct_gdp",

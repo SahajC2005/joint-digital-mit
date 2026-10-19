@@ -20,14 +20,14 @@ variation that does not exist. This script therefore does three legitimate thing
   PART 3  Keep DISTRIBUTIONAL inequality only where it is identified — BETWEEN
           countries — and report its sign honestly (it runs against the theory).
 
-USAGE (Colab):  put this next to final_panel_imputed__5_.csv, then  %run structural_inequality.py
+USAGE (Colab):  put this next to panel_estimation.csv, then  %run structural_inequality.py
 """
 from pathlib import Path
 import numpy as np, pandas as pd, warnings
 warnings.filterwarnings("ignore")
 from linearmodels.panel import PanelOLS, BetweenOLS, RandomEffects
 
-PANEL = Path("final_panel_imputed__5_.csv")
+PANEL = Path("panel_estimation.csv")
 df = pd.read_csv(PANEL, low_memory=False).sort_values(["iso3","year"])
 
 CONTROLS = ["log_gdp","trade_pct_gdp","inflation","investment_pct_gdp",

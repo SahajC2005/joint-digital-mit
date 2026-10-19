@@ -17,7 +17,7 @@ Honest note baked in: the displacement index is ~0.9 collinear with AI within co
 (it IS AI x structure), so it is an EXPOSURE index, not an AI-independent outcome. The
 labor-share test (Part C2) is the non-circular way to ask whether AI creates inequality.
 
-USAGE (Colab):  put next to final_panel_imputed__5_.csv, then  %run inequality_analysis.py
+USAGE (Colab):  put next to panel_estimation.csv, then  %run inequality_analysis.py
 Outputs a printed report + inequality_results.txt
 """
 from pathlib import Path
@@ -25,7 +25,7 @@ import numpy as np, pandas as pd, warnings, io, contextlib
 warnings.filterwarnings("ignore")
 from linearmodels.panel import PanelOLS, BetweenOLS
 
-PANEL = Path("final_panel_imputed__5_.csv")
+PANEL = Path("panel_estimation.csv")
 LABOR_SHARE_COL = "labsh"          # add this column (PWT labsh) to activate Part C2
 OUT = Path("/mnt/user-data/outputs"); OUT.mkdir(parents=True, exist_ok=True)
 report = io.StringIO()

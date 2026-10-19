@@ -20,7 +20,7 @@ from the committed code and two of the signs flip.**
 
 | | |
 |---|---|
-| panel | `data/processed/final_panel_imputed__5_.csv` — 3,255 rows × 139 cols, 217 countries, 2010–2024 |
+| panel | `data/processed/panel_estimation.csv` — 3,255 rows × 139 cols, 217 countries, 2010–2024 (named `final_panel_imputed__5_.csv` when this note was written) |
 | estimator | `PanelOLS` two-way FE, country-clustered SEs (as in `03_mundlak_reestimation.py`) |
 | scripts added | `code/04_rerun_verify.py` (every published number), `code/05_spec_probes.py` (variants for the ones that miss) |
 | outputs | `outputs/rerun/rerun_coefficients.csv`, `rerun_vs_published.csv`, `rerun_log.txt`, `spec_probes_log.txt` |
@@ -29,10 +29,10 @@ from the committed code and two of the signs flip.**
 Two things had to be resolved before anything would run:
 
 1. **The committed scripts point at the wrong panel.** `03_mundlak_reestimation.py` reads
-   `final_panel_imputed.csv` and `reframed_analysis.py` reads `final_panel_imputed__5_.csv`.
+   `panel_imputed.csv` and `reframed_analysis.py` reads `panel_estimation.csv`.
    Only the second one carries `F`, `G`, `FG`, `MI`, the lagged regressors and the constructed
    interactions — the first has 50 columns and none of them. The mundlak script as committed
-   cannot run. Everything here uses `final_panel_imputed__5_.csv`.
+   cannot run. Everything here uses `panel_estimation.csv`.
 2. **The exit risk set is lagged.** `Exit` is coded on the row *after* the transition, so those
    rows have `MI == 0`. Conditioning on `MI == 1` gives a risk set with zero events. The
    correct condition is `MI_l == 1`.
@@ -142,7 +142,7 @@ supported.
 
 1. **The panel is taken as given.** Nothing upstream was rebuilt — `src/run_pipeline.py`,
    `01_rebuild_F.py` and `02_rebuild_G.py` were not executed, and the raw-to-processed step
-   is unverified. If `final_panel_imputed__5_.csv` is wrong, every number above is wrong in
+   is unverified. If `panel_estimation.csv` is wrong, every number above is wrong in
    the same way, and the exact agreement with the report only shows the report was computed
    from this same file.
 2. **Dependency versions differ** from `code/requirements.txt` (linearmodels 7.1 vs 6.0,
@@ -152,7 +152,7 @@ supported.
    15–85%; a different grid moves the break and the two slopes.
 4. **The exit probit is a rare-events model on 16 events.** The report's caveat applies with
    equal force to the re-run.
-5. **`AI_scimago.csv` is not UTF-8.** It reads as latin-1 with a handful of mojibake country
+5. **`scimago_ai_publications.csv` is not UTF-8.** It reads as latin-1 with a handful of mojibake country
    names (Côte d'Ivoire, Haiti, Curaçao) that fail to map to ISO3 and drop out of the
    correlation. 1,589 of 1,627 rows survive.
 6. **Nothing in `outputs/rerun/` overwrites anything.** The published documents are unchanged;
@@ -188,9 +188,10 @@ published table, to four decimals. Nothing had to be reconstructed or re-derived
 the cell sources give the regressor lists directly.
 
 The notebook loads `final_panel (12).csv` (3,474 × 42), applies the sample hygiene
-and Kalman imputation of its §0b–0c, saves `final_panel_imputed.csv` at 3,255 × 50,
+and Kalman imputation of its §0b–0c, saves `final_panel_imputed.csv` (committed here as
+`panel_imputed.csv`) at 3,255 × 50,
 and then builds the constructed regressors in its §1–2 and §16. The committed
-`final_panel_imputed__5_.csv` (3,255 × 139) **is that panel after those constructions**
+`panel_estimation.csv` (3,255 × 139) **is that panel after those constructions**
 — it already carries `gini`, `Z_gini`, `G_Gini_l`, `FG_Gini_l`, `D_Gini_l`,
 `Gini_MI_l`, `G_Gini_MI_l`, `FG_Gini_MI_l`, `G_1mH_l`, `sigma_kis_l`, `Shock`,
 `F_Shock`, `Gini_Shock` and `FG_Shock`. So no regressor had to be rebuilt to recover
@@ -298,3 +299,19 @@ pandas and numpy are newer than the 2026-10-18 run (2.2.3 / 2.2.3) and newer sti
 `code/requirements.txt`; the four-decimal agreement with the notebook's stored Colab
 outputs, computed on a third set of versions again, is the evidence that this does not
 matter for these estimates.
+
+---
+
+## A note on filenames (2026-10-19)
+
+The data files were renamed after this note was written, so that every name says what the
+file holds. `README.md` carries the full old → new table. The three that appear above:
+
+| in this note | now |
+|---|---|
+| `final_panel_imputed__5_.csv` | `data/processed/panel_estimation.csv` |
+| `final_panel_imputed.csv` (the committed copy) | `data/processed/panel_imputed.csv` |
+| `AI_scimago.csv` | `data/raw/scimago_ai_publications.csv` |
+
+Filenames *inside* the notebooks were deliberately left alone, so their stored cell outputs
+stay exactly as they were when the §4 specifications were recovered from them.

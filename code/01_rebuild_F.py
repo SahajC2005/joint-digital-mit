@@ -19,8 +19,8 @@ import numpy as np, pandas as pd
 # ---------------- CONFIG: set these to your downloaded column names ----------------
 FINDEX_CSV = "findex_country.csv"
 FAS_CSV    = "imf_fas.csv"
-PANEL_CSV  = "final_panel_imputed.csv"
-OUT_CSV    = "final_panel_F_rebuilt.csv"
+PANEL_CSV  = "panel_imputed.csv"
+OUT_CSV    = "F_rebuild_panel.csv"
 
 # The 4 Findex components to average (Eq.25). Map to the series in YOUR download.
 FINDEX_COMPONENTS = {

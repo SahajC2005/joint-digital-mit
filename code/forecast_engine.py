@@ -30,7 +30,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 rng = np.random.default_rng(42)
-PANEL          = Path("final_panel_imputed__5_.csv")
+PANEL          = Path("panel_estimation.csv")
 ESCAPE_PPP     = 26000          # high-income floor (HI 10th pct of gdp_pc_ppp)
 LAST_YEAR      = 2024
 HORIZON        = 2040

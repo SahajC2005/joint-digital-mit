@@ -11,8 +11,9 @@ plausible regressor sets and none matched. The specifications were recovered on
 2026-10-19 from the stored cell outputs of `notebooks/joint_digital_mit_analysis.ipynb`,
 which is the notebook the report was written from: it prints beta3 = 1.0956 on
 N = 1,380 and every Section 4 coefficient in the published table. The notebook built
-the panel from `final_panel (12).csv` and saved it as `final_panel_imputed.csv`; the
-committed `final_panel_imputed__5_.csv` is that panel with the constructed Section 4
+the panel from `final_panel (12).csv` and saved it as `final_panel_imputed.csv`
+(committed here as `panel_imputed.csv`); the
+committed `panel_estimation.csv` is that panel with the constructed Section 4
 columns (`gini`, `Z_gini`, `G_Gini_l`, `FG_Gini_l`, `D_Gini_l`, `Gini_MI_l`,
 `G_Gini_MI_l`, `FG_Gini_MI_l`, `G_1mH_l`, `sigma_kis_l`, `Shock`, `F_Shock`,
 `Gini_Shock`, `FG_Shock`) already in it, so no regressor is rebuilt here.
@@ -57,7 +58,7 @@ from linearmodels.panel import PanelOLS
 from linearmodels.iv import IV2SLS
 
 ROOT = Path(__file__).resolve().parent.parent
-PANEL = ROOT / "data" / "processed" / "final_panel_imputed__5_.csv"
+PANEL = ROOT / "data" / "processed" / "panel_estimation.csv"
 OUT = ROOT / "outputs" / "rerun"
 OUT.mkdir(parents=True, exist_ok=True)
 

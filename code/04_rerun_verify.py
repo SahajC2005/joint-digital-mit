@@ -9,7 +9,7 @@ Nothing in this repository had been executed before this script: the documents w
 written from runs whose outputs are not on disk. This script exists so that every
 number in them can be checked against the committed data and code.
 
-Panel:  data/processed/final_panel_imputed__5_.csv  (the estimation-ready panel:
+Panel:  data/processed/panel_estimation.csv  (the estimation-ready panel:
         it already carries F, G, FG, MI, the lagged regressors and the constructed
         interaction terms; the other processed panels do not).
 
@@ -33,7 +33,7 @@ from linearmodels.panel import PanelOLS, BetweenOLS, RandomEffects
 import statsmodels.api as sm
 
 ROOT = Path(__file__).resolve().parent.parent
-PANEL = ROOT / "data" / "processed" / "final_panel_imputed__5_.csv"
+PANEL = ROOT / "data" / "processed" / "panel_estimation.csv"
 OUT = ROOT / "outputs" / "rerun"
 OUT.mkdir(parents=True, exist_ok=True)
 
@@ -319,9 +319,9 @@ for v in ["F", "G", "Z_readiness", "Z_activity", "Z_adoption", "Z_gini"]:
 print("\n-- AI source validation (OpenAlex vs Scimago) --")
 try:
     import country_converter as coco
-    # AI_scimago.csv is not UTF-8; a handful of country names are mojibake and
+    # scimago_ai_publications.csv is not UTF-8; a handful of country names are mojibake and
     # simply fail to map, which is why N is 1,589 and not the full file.
-    sc = pd.read_csv(ROOT / "data" / "raw" / "AI_scimago.csv",
+    sc = pd.read_csv(ROOT / "data" / "raw" / "scimago_ai_publications.csv",
                      encoding="latin-1", low_memory=False)
     sc["iso3"] = coco.CountryConverter().convert(sc["country"].tolist(),
                                                  to="ISO3", not_found=None)

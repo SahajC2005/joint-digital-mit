@@ -40,38 +40,38 @@ code/tests/__init__.py  <-  tests/__init__.py
 code/tests/test_integration.py  <-  tests/test_integration.py
 code/tests/test_utilities.py  <-  tests/test_utilities.py
 data/processed/final_panel (12).csv  <-  final_panel (12).csv
-data/processed/final_panel_F_rebuilt.csv  <-  final_panel_F_rebuilt.csv
+data/processed/F_rebuild_interpolation_grid.csv  <-  final_panel_F_rebuilt.csv
 data/processed/final_panel_imputed (4).csv  <-  final_panel_imputed (4).csv
-data/processed/final_panel_imputed__5_.csv  <-  Bam/final_panel_imputed__5_.csv
-data/processed/long_panel_concentration.csv  <-  long_panel_concentration.csv
-data/processed/merged.csv  <-  merged.csv
-data/processed/panel (1).parquet  <-  panel (1).parquet
+data/processed/panel_estimation.csv  <-  Bam/final_panel_imputed__5_.csv
+data/processed/panel_long_1980_2024_top_shares.csv  <-  long_panel_concentration.csv
+data/processed/panel_estimation_with_top_shares.csv  <-  merged.csv
+data/processed/panel_merged_full.parquet  <-  panel (1).parquet
 data/processed/panel.parquet  <-  data_acquisition_output (3)/processed/panel.parquet
-data/processed/unified_panel.csv  <-  unified_panel.csv
-data/raw/10sd_jan15_2014.csv  <-  10sd_jan15_2014.csv
-data/raw/10sd_jan15_2014.xlsx  <-  10sd_jan15_2014.xlsx
+data/processed/panel_estimation_unified.csv  <-  unified_panel.csv
+data/raw/ggdc_10_sector_2014.csv  <-  10sd_jan15_2014.csv
+data/raw/ggdc_10_sector_2014.xlsx  <-  10sd_jan15_2014.xlsx
 data/raw/2024-GAIRI-data.xlsx  <-  2024-GAIRI-data.xlsx
 [removed 2026-10-19] ADBI_Quality_Growth.pptx  <-  ADBI_Quality_Growth.pptx  (untracked on request; the file is still on disk at docs/ and in ~/Downloads/joint_digital_mit 2/, and remains in history at commit 75f692c)
 data/raw/AI Preparedness Index.csv  <-  AI Preparedness Index.csv
-data/raw/AI_scimago.csv  <-  AI_scimago.csv
+data/raw/scimago_ai_publications.csv  <-  AI_scimago.csv
 data/raw/Digital Infrastructure (Index).csv  <-  Digital Infrastructure (Index).csv
-data/raw/Final data for analysis.xlsx  <-  Final data for analysis.xlsx
-data/raw/Final data for analysis_stata.dta  <-  Final data for analysis_stata.dta
+data/raw/lab_experiment_svo_responses.xlsx  <-  Final data for analysis.xlsx
+data/raw/lab_experiment_svo_responses.dta  <-  Final data for analysis_stata.dta
 data/raw/GARI_2024.xlsx  <-  GARI_2024.xlsx
-data/raw/Generation 2.xlsx  <-  Generation 2.xlsx
+data/raw/lab_experiment_generation2.xlsx  <-  Generation 2.xlsx
 data/raw/GlobalFindexDatabase2025.csv  <-  GlobalFindexDatabase2025.csv
-data/raw/Gneration 1 .xlsx  <-  Gneration 1 .xlsx
+data/raw/lab_experiment_generation1.xlsx  <-  Gneration 1 .xlsx
 data/raw/Human Capital and Labor Market Policies (Index).csv  <-  Human Capital and Labor Market Policies (Index).csv
-data/raw/IMF data.csv  <-  IMF data.csv
+data/raw/imf_financial_access_survey.csv  <-  IMF data.csv
 data/raw/Innocation and Economic Integration (Index).csv  <-  Innocation and Economic Integration (Index).csv
-data/raw/Oxford GARI 2024 - Sheet1.csv  <-  Oxford GARI 2024 - Sheet1.csv
+data/raw/oxford_gari_2024_pillars.csv  <-  Oxford GARI 2024 - Sheet1.csv
 data/raw/Regulation and Ethics (Index).csv  <-  Regulation and Ethics (Index).csv
-data/raw/data-noouS.csv  <-  data-noouS.csv
+data/raw/ilo_ai_exposure_gradients_by_income.csv  <-  data-noouS.csv
 data/raw/findex_2021_raw.csv  <-  data_acquisition_output/raw/findex_2021_raw.csv
 data/raw/findex_all_waves_raw.csv  <-  data_acquisition_output/raw/findex_all_waves_raw.csv
-data/raw/findex_components.csv  <-  data_acquisition_output (3)/raw/findex_components.csv
-data/raw/gari_2024.csv  <-  data_acquisition_output/raw/gari_2024.csv
-data/raw/ilo_rho_by_income.csv  <-  data_acquisition_output (3)/raw/ilo_rho_by_income.csv
+data/raw/findex_account_ownership.csv  <-  data_acquisition_output (3)/raw/findex_components.csv
+data/raw/oxford_gari_2024_totals.csv  <-  data_acquisition_output/raw/gari_2024.csv
+data/raw/ilo_ai_exposure_by_income_group.csv  <-  data_acquisition_output (3)/raw/ilo_rho_by_income.csv
 data/raw/ilostat_kis.csv  <-  data_acquisition_output (3)/raw/ilostat_kis.csv
 data/raw/imf-dm-export-20260607 (4).xls  <-  imf-dm-export-20260607 (4).xls
 data/raw/imf_aipi/AI Preparedness Index.csv  <-  data_acquisition_output/raw/imf_aipi/AI Preparedness Index.csv
@@ -81,18 +81,18 @@ data/raw/imf_aipi/Innovation and Economic Integration (Index).csv  <-  data_acqu
 data/raw/imf_aipi/Regulation and Ethics (Index).csv  <-  data_acquisition_output/raw/imf_aipi/Regulation and Ethics (Index).csv
 data/raw/income_groups_current.csv  <-  data_acquisition_output (3)/raw/income_groups_current.csv
 data/raw/income_groups_hist.csv  <-  data_acquisition_output (3)/raw/income_groups_hist.csv
-data/raw/inequality_forecast_summary.csv  <-  inequality_forecast_summary.csv
+data/raw/bam_inequality_forecast_summary.csv  <-  inequality_forecast_summary.csv
 data/raw/openalex_ai_pubs.csv  <-  data_acquisition_output (3)/raw/openalex_ai_pubs.csv
 data/raw/oxford_gari/GARI_2024.xlsx  <-  data_acquisition_output/raw/oxford_gari/GARI_2024.xlsx
 data/raw/oxford_gari/GARI_2024_report.pdf  <-  data_acquisition_output (3)/raw/oxford_gari/GARI_2024_report.pdf
-data/raw/pwt.csv  <-  data_acquisition_output (3)/raw/pwt.csv
+data/raw/pwt_human_capital.csv  <-  data_acquisition_output (3)/raw/pwt.csv
 data/raw/wb_income/CLASS.xlsx  <-  data_acquisition_output (1)/raw/wb_income/CLASS.xlsx
 data/raw/wb_income/OGHIST.xlsx  <-  data_acquisition_output (3)/raw/wb_income/OGHIST.xlsx
 data/raw/wdi_controls.csv  <-  data_acquisition_output (3)/raw/wdi_controls.csv
 data/raw/wgi.csv  <-  data_acquisition_output (3)/raw/wgi.csv
 data/raw/wgi/wgidataset.xlsx  <-  data_acquisition_output (3)/raw/wgi/wgidataset.xlsx
-data/raw/wgidataset_with_sourcedata-2025.xlsx  <-  wgidataset_with_sourcedata-2025.xlsx
-data/raw/wid.csv  <-  wid.csv
+data/raw/wgi_2025_with_source_data.xlsx  <-  wgidataset_with_sourcedata-2025.xlsx
+data/raw/wid_top_shares.csv  <-  wid.csv
 docs/IMPROVEMENT_PLAYBOOK.md  <-  IMPROVEMENT_PLAYBOOK.md
 docs/README.md  <-  README.md
 docs/derivations/FinTech_and_MIT.pdf  <-  PDF/FinTech_and_MIT.pdf
@@ -125,7 +125,7 @@ notebooks/NS_Constrained_AE_YieldCurve_FIXED_v6 (3).ipynb  <-  NS_Constrained_AE
 notebooks/NS_Constrained_AE_YieldCurve_FIXED_v8b (1).ipynb  <-  NS_Constrained_AE_YieldCurve_FIXED_v8b (1).ipynb
 notebooks/RRRReeeaaaalllll_B_spline (1).ipynb  <-  RRRReeeaaaalllll_B_spline (1).ipynb
 notebooks/Spec6_Extended_Colab_(1) (1).ipynb  <-  Spec6_Extended_Colab_(1) (1).ipynb
-notebooks/Spec6_Extended_Colab_(1).ipynb  <-  Spec6_Extended_Colab_(1).ipynb
+notebooks/Spec6_Extended_Colab_v2.ipynb  <-  Spec6_Extended_Colab_(1).ipynb
 notebooks/analysis_notebook (1).ipynb  <-  analysis_notebook (1).ipynb
 notebooks/data_acquisition_colab_(3).ipynb  <-  data_acquisition_colab_(3).ipynb
 notebooks/data_acquisition_colab_fixed (5).ipynb  <-  data_acquisition_colab_fixed (5).ipynb
