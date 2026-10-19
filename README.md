@@ -25,7 +25,8 @@ MANIFEST.txt every file's original path, and every excluded file with the reason
 
 | file | what it is |
 |---|---|
-| `docs/joint_digital_mit_report.md` | the full empirical findings report — read this first |
+| `docs/RERUN_NOTES.md` | **the re-run: which published numbers reproduce on this data and which do not — read this first** |
+| `docs/joint_digital_mit_report.md` | the full empirical findings report |
 | `docs/results_memo.md` | later one-page summary of headline numbers |
 | `docs/IMPROVEMENT_PLAYBOOK.md` | diagnosis of the identification problem + the fixes, with data links |
 | `docs/README.md` | the original replication-package README (pipeline stages) |
@@ -48,18 +49,25 @@ rich-country confound.
 too: φ₄ = +0.802 (wrong sign), and the top-inequality tercile shows the *largest* joint-digital
 effect, the reverse of the hypothesis. The IV is weak throughout (first-stage F ≈ 2.8–6.6).
 
-## Two open issues
+*Re-run status (2026-10-18): everything in "what holds" reproduces on the committed panel to
+three decimals. Of "what does not hold", δ₄ and the tercile ordering reproduce, ψ₄ reproduces
+in sign and significance on 16 rather than 13 events, and the §4 inequality figures (β₆, φ₄,
+β₁₁) do not — see `docs/RERUN_NOTES.md` before quoting them.*
 
-**1. `results_memo.md` and `joint_digital_mit_report.md` do not tell the same story.**
-The report (18 Jun) concludes plainly that *"the middle-income-escape and displacement
-mechanisms are not identified in these data."* The memo (1 Jul, newer) leads with
-**"Escape dividend (FE): β₃(F×G) = +1.014\*\*"** and an income threshold switching on below
-≈\$6,216 PPP (+2.78\*\*\* below, −0.27 above). These are not strictly contradictory — an
-MI-dummy triple interaction and a continuous income-threshold split are different tests, and
-the memo's Gini nulls agree with the report — but the memo relabels β₃ as the "escape
-dividend" and leads on a threshold result, which reads as the MIT story working while the
-report says it does not. **Unresolved. Settle which framing the evidence supports before any
-of this goes into a draft.**
+## Open issues (the first is now settled)
+
+**1. `results_memo.md` and `joint_digital_mit_report.md` do not tell the same story —
+settled by the re-run, in the report's favour.** The report (18 Jun) concludes plainly that
+*"the middle-income-escape and displacement mechanisms are not identified in these data."*
+The memo (1 Jul, newer) leads with **"Escape dividend (FE): β₃(F×G) = +1.014\*\*"** and an
+income threshold switching on below ≈\$6,216 PPP.
+
+Re-estimated here, the committed panel gives β₃ = **+1.0956\*\*, N=1,380** — the report's
+1.096 to three decimals, not the memo's 1.014 on N=1,403, a sample this repository does not
+contain. The income split is real but weaker than the memo states (break at \$6,948, +1.98\*\*
+below, **+0.23** above rather than −0.27), and δ₄, the actual middle-income-band test, is
+−0.609 n.s. exactly as published. **Use the report's framing. β₃ is a within-country
+complementarity (+0.73 within vs −0.74 between, p=0.003), not an "escape dividend".**
 
 **2. Measurement is the binding constraint, and it is fixable.** Per
 `IMPROVEMENT_PLAYBOOK.md`, measured on the panel itself:
@@ -94,11 +102,52 @@ recovering.
 
 ## Caveats
 
-- **Nothing here has been re-run or verified in this repository.** All numbers quoted above
-  are read from the project's own documents. The pipeline README notes the package was a
-  *"draft pipeline, not yet executed end-to-end."*
+- **The estimation has now been re-run; the upstream pipeline has not.** Every published
+  coefficient was re-estimated on the committed panel on 2026-10-18 — see the section below
+  and `docs/RERUN_NOTES.md`. What remains unverified is the raw-to-processed step:
+  `src/run_pipeline.py`, `01_rebuild_F.py` and `02_rebuild_G.py` were not executed, and the
+  pipeline README still describes a *"draft pipeline, not yet executed end-to-end."*
 - **Redistributed data.** `data/raw/` contains World Bank, IMF, ILO, PWT, WGI and Oxford GARI
   extracts under their respective terms. This is why the repository is private; check the
   licence of each source before any public release.
 - Several notebooks (`NS_Constrained_AE_YieldCurve*`, `RRRReeeaaaalllll_B_spline`,
   `bspline3d.py`) are from adjacent work and may not belong to this paper.
+
+---
+
+## Measured vs. documented (added 2026-10-18)
+
+The estimation was re-run locally against the committed panel. Full detail, including every
+specification probe, is in **`docs/RERUN_NOTES.md`**.
+
+| | |
+|---|---|
+| `code/04_rerun_verify.py` | re-estimates all 41 published quantities and scores each one |
+| `code/05_spec_probes.py` | alternative regressor sets for the ones that miss |
+| `outputs/rerun/rerun_coefficients.csv` | every coefficient from every spec (59 rows) |
+| `outputs/rerun/rerun_vs_published.csv` | published value, re-run value, gap, verdict (41 rows) |
+| `outputs/rerun/rerun_log.txt`, `spec_probes_log.txt` | full console output |
+
+**20 of 41 reproduce to three decimals, 10 are close, 7 differ in magnitude, 4 flip sign.**
+
+**What reproduces.** The whole spine of the paper. β₃ (F×G) = **+1.0956\*\*** against a
+published 1.096\*\*; δ₄ (F×G×MI) = **−0.6092 n.s.** against −0.609; the dynamic panel, the
+exclude-China variant, every cell of the §5 robustness table (drop-COVID 0.491, wave-years-only
+−0.062 on N=412, forward-average 0.894\*\*, complete-case 1.21/−1.17), the threshold's upper
+slope, the Mundlak within/between split (+0.729 / −0.744, p=0.003) and the AI source validation
+(log-log r = 0.961 vs 0.964). The playbook's measurement diagnosis holds too: `Z_readiness` and
+`Z_adoption` have *exactly* zero within-country variation.
+
+**What does not.** The inequality block of §4, and only that. β₆ (displacement) comes out
+**+3.25** against a published −24.85; β₁₁ (F×G×Gini) **+0.33** against −0.118, with a sign that
+moves between +0.33 and −0.59 across plausible regressor sets; ω (F×Shock) is **significant
+here** (+0.98, p=0.001) where the report calls it underpowered; θ matches no Gini scale in the
+panel. The common cause is that §4's specifications have no script in `code/` —
+`inequality_analysis.py` and `reframed_analysis.py` both touch the Gini channel and neither
+produces the published numbers, and the primed equations have no code at all. **§4 is not
+reconstructible from this repository and should not be quoted until it is re-specified.**
+
+Two defects in the committed code were found on the way and are documented in the notes:
+`03_mundlak_reestimation.py` points at `final_panel_imputed.csv`, which lacks every regressor
+it uses, and the exit risk set must condition on `MI_l == 1` (conditioning on `MI == 1` yields
+zero events, because `Exit` is coded on the post-transition row).

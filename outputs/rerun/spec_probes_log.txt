@@ -1,0 +1,35 @@
+=== beta6 displacement variants (published -24.85; per-SD -1.09) ===
+D_term_l only + F,G,FG                         N= 1085  D_term_l=+3.2533(p=0.896)
+D_z_l (standardised)                           N= 1085  D_z_l=+0.1430(p=0.896)
+D_term_l + MI block                            N= 1085  D_term_l=+3.9904(p=0.876)
+D_term_l + G_1mH_l + sigma_kis_l               N= 1085  D_term_l=-13.1154(p=0.827)
+D_term_l, no controls                          N= 1315  D_term_l=+9.6260(p=0.346)
+D_term_l + I_l/GI_l/GH_l/GS_l                  N= 1085  D_term_l=-27.1529(p=0.671)
+
+=== beta11 F x G x Gini variants (published -0.118) ===
+Eq30' G_Gini + FG_Gini                         N= 1316  G_Gini_l=-0.9863(p=0.244) FG_Gini_l=+0.3327(p=0.553)
++ D_term, D_Gini                               N= 1039  G_Gini_l=-3.2359(p=0.179) FG_Gini_l=+0.0260(p=0.969) D_Gini_l=+36.9581(p=0.352)
+full primed with MI block                      N= 1039  FG_Gini_l=-0.5947(p=0.476) FG_Gini_MI_l=+1.6319(p=0.203) D_Gini_l=+50.5761(p=0.225)
+contemporaneous Gini terms                     N= 1283  G_Gini=-1.2995(p=0.081) FG_Gini=+0.4497(p=0.417)
+
+=== theta inequality -> growth (published -153.9) ===
+Z_gini_l (z units)                             N= 1592  Z_gini_l=-1.8773(p=0.208)
+gini (0-1 share units)                         N= 1562  gini=-33.7644(p=0.082)
+gini_disp                                      N= 1385  gini_disp=-24.7074(p=0.098)
+gini + F,G,FG                                  N= 1296  gini=-10.6803(p=0.376)
+   gini units: {'mean': 0.3799, 'std': 0.0768, 'min': 0.223, 'max': 0.648}
+
+=== omega F x Shock (published +0.614, reported n.s.) ===
+F_Shock + baseline                             N= 1380  F_Shock=+0.9764(p=0.001)
++ Gini_Shock, Z_gini_l                         N= 1316  F_Shock=+0.8145(p=0.026)
++ FG_Shock                                     N= 1380  F_Shock=+0.7675(p=0.044)
+
+=== between estimator (published -0.581***) ===
+lagged F_l,G_l,FG_l + controls                 k= 135  FG_l=-0.9816(p=0.000)
+contemporaneous F,G,FG + controls              k= 136  FG=-0.4980(p=0.063)
+lagged, no controls                            k= 156  FG_l=-0.6193(p=0.023)
+
+=== gamma1 AI -> inequality (published +0.005) ===
+Z_gini_l on G_l, FE                            N= 1316  G_l=-0.0845(p=0.576)
+gini on G, FE                                  N= 1396  G=-0.0063(p=0.590)
+Z_gini on G, no controls                       N= 2186  G=-0.1506(p=0.128)

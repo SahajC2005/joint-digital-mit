@@ -1,0 +1,42 @@
+quantity,source,spec,param,published,published_stars,rerun,rerun_stars,abs_diff,rel_diff,n_obs,verdict
+"beta3 F x G (baseline, Eq. 30)",report §2,baseline_spec1,FG_l,1.096,**,1.0956,**,-0.0004,0.0004,1380,reproduces
+"beta3, dynamic panel (Eq. 47)",report §2,dynamic_lagged_dep,FG_l,1.098,**,1.098,**,-0.0,0.0,1380,reproduces
+"beta3, excluding China",report §2/5,exclude_china,FG_l,1.094,**,1.0943,**,0.0003,0.0003,1378,reproduces
+delta4 F x G x MI (Eq. 33),report §3.1,mit_spec4,FG_MI_l,-0.609,,-0.6092,,-0.0002,0.0003,1380,reproduces
+"beta6 displacement (Eqs. 13, 32)",report §3.2,displacement,D_term_l,-24.85,,3.2533,,28.1033,1.1309,1085,SIGN FLIP
+psi4 vulnerability -> exit,report §3.3,exit_probit,Vuln,1.223,**,1.4413,***,0.2183,0.1785,752,close
+"exit rate, vulnerable",report §3.3,exit_rates,exit_rate_vulnerable,0.24,,0.1875,,-0.0525,0.2187,48,close
+"exit rate, non-vulnerable",report §3.3,exit_rates,exit_rate_not_vulnerable,0.008,,0.0099,,0.0019,0.2429,704,reproduces
+beta4 Gini level (Eq. 30'),report §4,ineq_gini_level,Z_gini_l,-0.236,,-0.2364,,-0.0004,0.0015,1316,reproduces
+beta10 G x Gini,report §4,ineq_erosion,G_Gini_l,-1.551,,-0.9863,,0.5647,0.3641,1316,"same sign, different magnitude"
+beta11 F x G x Gini (key),report §4,ineq_erosion,FG_Gini_l,-0.118,,0.3327,,0.4507,3.8199,1316,SIGN FLIP
+beta7 D x Gini,report §4,ineq_displacement_amp,D_Gini_l,-9.473,,-15.1456,,-5.6726,0.5988,1039,"same sign, different magnitude"
+phi4 F x G x Gini x MI (key),report §4,ineq_mit_escape_phi4,FG_Gini_MI_l,0.802,,0.74,,-0.062,0.0773,1316,close
+gamma1 AI -> inequality,report §4,gamma1_ai_to_gini,G_l,0.005,,-0.0845,,-0.0895,17.9005,1316,SIGN FLIP
+theta inequality -> growth,report §4,theta_gini_to_growth,Z_gini_l,-153.9,,-1.8773,,152.0227,0.9878,1592,"same sign, different magnitude"
+omega F x Shock,report §4,fintech_shock_resilience,F_Shock,0.614,,0.9764,***,0.3624,0.5902,1380,"same sign, different magnitude"
+"top Gini tercile, MI sample",report §4,mi_gini_tercile_high,FG_l,1.37,,1.2561,,-0.1139,0.0831,224,close
+"beta3, drop COVID 2020-21",report §5,drop_covid,FG_l,0.491,,0.4915,,0.0005,0.001,1155,reproduces
+"delta4, drop COVID 2020-21",report §5,drop_covid_spec4,FG_MI_l,0.269,,0.2688,,-0.0002,0.0007,1155,reproduces
+"beta3, wave-years-only F",report §5,wave_years_only,FG_l,-0.062,,-0.0623,,-0.0003,0.0042,412,reproduces
+"delta4, wave-years-only F",report §5,wave_years_only_spec4,FG_MI_l,-1.293,,-1.2926,,0.0004,0.0003,412,reproduces
+"beta3, 3-yr forward-average growth",report §5,forward_avg_growth,FG_l,0.894,**,0.8943,**,0.0003,0.0003,1177,reproduces
+"delta4, 3-yr forward-average growth",report §5,forward_avg_growth_spec4,FG_MI_l,0.049,,0.0485,,-0.0005,0.0096,1177,reproduces
+"beta3, between estimator",report §5,between_estimator,FG_l,-0.581,***,-0.9816,***,-0.4006,0.6895,135,"same sign, different magnitude"
+"delta4, between estimator",report §5,between_estimator_spec4,FG_MI_l,0.158,,0.1183,,-0.0397,0.2511,135,"same sign, different magnitude"
+"beta3, complete case",report §5,complete_case,FG_l,1.21,,1.2064,,-0.0036,0.0029,882,reproduces
+"delta4, complete case",report §5,complete_case_spec4,FG_MI_l,-1.17,,-1.1738,,-0.0038,0.0032,882,reproduces
+threshold on F x G,report §2,threshold_FG_l,threshold,0.351,,0.369,,0.018,0.0514,1380,close
+slope below threshold,report §2,threshold_FG_l,slope_below,-1.55,,-1.5706,,-0.0206,0.0133,1380,close
+slope above threshold,report §2,threshold_FG_l,slope_above,0.82,*,0.8243,*,0.0043,0.0053,1380,reproduces
+Mundlak beta3 within,README,mundlak_spec1,FG_l_within,0.73,,0.7293,**,-0.0007,0.0009,1380,reproduces
+Mundlak beta3 between,README,mundlak_spec1,FG_l_between,-0.74,,-0.7435,***,-0.0035,0.0048,1380,reproduces
+F within/between SD ratio,playbook,measurement_sd,F,0.28,,0.3358,,0.0558,0.1994,2023,close
+G within/between SD ratio,playbook,measurement_sd,G,0.09,,0.1022,,0.0122,0.1351,2560,close
+Z_readiness within/between ratio,playbook,measurement_sd,Z_readiness,0.0,,0.0,,0.0,,1635,reproduces
+Z_adoption within/between ratio,playbook,measurement_sd,Z_adoption,0.0,,0.0,,0.0,,2610,reproduces
+AI source validation log-log r,memo,ai_source_validation,loglog_corr_openalex_scimago,0.964,,0.9607,,-0.0033,0.0035,1589,reproduces
+beta3 (memo figure),memo,baseline_spec1,FG_l,1.014,**,1.0956,**,0.0816,0.0805,1380,close
+income threshold (PPP),memo,income_threshold,threshold_gdp_pc_ppp,6216.0,,6947.7148,,731.7148,0.1177,1380,close
+F x G below income threshold,memo,income_threshold,FG_below,2.78,***,1.9788,**,-0.8012,0.2882,1380,"same sign, different magnitude"
+F x G above income threshold,memo,income_threshold,FG_above,-0.27,,0.2296,,0.4996,1.8503,1380,SIGN FLIP
