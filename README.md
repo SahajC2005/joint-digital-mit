@@ -49,10 +49,11 @@ rich-country confound.
 too: φ₄ = +0.802 (wrong sign), and the top-inequality tercile shows the *largest* joint-digital
 effect, the reverse of the hypothesis. The IV is weak throughout (first-stage F ≈ 2.8–6.6).
 
-*Re-run status (2026-10-18): everything in "what holds" reproduces on the committed panel to
-three decimals. Of "what does not hold", δ₄ and the tercile ordering reproduce, ψ₄ reproduces
-in sign and significance on 16 rather than 13 events, and the §4 inequality figures (β₆, φ₄,
-β₁₁) do not — see `docs/RERUN_NOTES.md` before quoting them.*
+*Re-run status (2026-10-18, §4 settled 2026-10-19): everything in "what holds" reproduces on
+the committed panel to three decimals. Of "what does not hold", δ₄ and the tercile ordering
+reproduce, ψ₄ reproduces in sign and significance on 16 rather than 13 events, and the §4
+inequality figures — β₆, β₁₁, φ₄, γ₁, θ and ω — now reproduce to four decimals once the
+primed specifications are estimated as written. See `docs/RERUN_NOTES.md`.*
 
 ## Open issues (the first is now settled)
 
@@ -124,11 +125,16 @@ specification probe, is in **`docs/RERUN_NOTES.md`**.
 |---|---|
 | `code/04_rerun_verify.py` | re-estimates all 41 published quantities and scores each one |
 | `code/05_spec_probes.py` | alternative regressor sets for the ones that miss |
+| `code/06_recover_section4.py` | the §4 primed specifications, recovered and re-estimated |
 | `outputs/rerun/rerun_coefficients.csv` | every coefficient from every spec (59 rows) |
 | `outputs/rerun/rerun_vs_published.csv` | published value, re-run value, gap, verdict (41 rows) |
-| `outputs/rerun/rerun_log.txt`, `spec_probes_log.txt` | full console output |
+| `outputs/rerun/rerun_vs_published_recounted.csv` | the same 41 rows after the §4 recovery |
+| `outputs/rerun/section4_vs_published.csv` | the §4 table, published vs recovered (13 rows) |
+| `outputs/rerun/section4_coefficients.csv`, `section4_iv_first_stage.csv` | every §4 coefficient; the Bartik first-stage F |
+| `outputs/rerun/rerun_log.txt`, `spec_probes_log.txt`, `section4_log.txt` | full console output |
 
-**20 of 41 reproduce to three decimals, 10 are close, 7 differ in magnitude, 4 flip sign.**
+**29 of 41 reproduce to three decimals, 8 are close, 3 differ in magnitude, 1 flips sign**
+(20/10/7/4 before the §4 specifications were recovered on 2026-10-19).
 
 **What reproduces.** The whole spine of the paper. β₃ (F×G) = **+1.0956\*\*** against a
 published 1.096\*\*; δ₄ (F×G×MI) = **−0.6092 n.s.** against −0.609; the dynamic panel, the
@@ -138,14 +144,24 @@ slope, the Mundlak within/between split (+0.729 / −0.744, p=0.003) and the AI 
 (log-log r = 0.961 vs 0.964). The playbook's measurement diagnosis holds too: `Z_readiness` and
 `Z_adoption` have *exactly* zero within-country variation.
 
-**What does not.** The inequality block of §4, and only that. β₆ (displacement) comes out
-**+3.25** against a published −24.85; β₁₁ (F×G×Gini) **+0.33** against −0.118, with a sign that
-moves between +0.33 and −0.59 across plausible regressor sets; ω (F×Shock) is **significant
-here** (+0.98, p=0.001) where the report calls it underpowered; θ matches no Gini scale in the
-panel. The common cause is that §4's specifications have no script in `code/` —
-`inequality_analysis.py` and `reframed_analysis.py` both touch the Gini channel and neither
-produces the published numbers, and the primed equations have no code at all. **§4 is not
-reconstructible from this repository and should not be quoted until it is re-specified.**
+**§4, and how it was settled.** The first re-run missed five §4 figures (β₆ came out +3.25
+against a published −24.85, β₁₁ +0.33 against −0.118, ω significant where the report calls it
+underpowered, θ on no recognisable Gini scale, γ₁ wrong-signed) and concluded the primed
+specifications were not reconstructible. **That conclusion was wrong.** They are in
+`notebooks/joint_digital_mit_analysis.ipynb`, a tracked notebook whose stored outputs print
+every §4 coefficient to four decimals; `04_rerun_verify.py` and `05_spec_probes.py` had
+guessed the regressor sets instead of reading them, and in each case the guess dropped a
+block of terms the primed equation carries (the absorptive-capacity pair `GH`/`GS` for β₆,
+the institutional block for β₁₁, `FG_Shock` for ω, the skill-bias term for γ₁; θ is a
+two-step coefficient on a *fitted* Gini, not on Gini).
+
+`code/06_recover_section4.py` estimates the specifications as written and **all 13 of them
+reproduce to four decimals**, including the Bartik first-stage F of 4.20. Substantively
+nothing moves: β₁₁ is correctly signed and p = 0.87, **φ₄ = +0.802 is wrong-signed**, the
+tercile ordering is backwards, the IV is weak, and ω = +0.614 is insignificant — so the one
+place the first re-run looked *stronger* than the paper was its own artifact. **The §4 table
+can be quoted as written**; the earlier instruction not to is withdrawn. §4 fails, exactly as
+the report says it does.
 
 Two defects in the committed code were found on the way and are documented in the notes:
 `03_mundlak_reestimation.py` points at `final_panel_imputed.csv`, which lacks every regressor

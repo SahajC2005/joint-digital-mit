@@ -1,0 +1,127 @@
+spec,param,estimate,std_error,p_value,stars,n_obs,n_countries,note
+spec3_eq32_displacement,F_l,0.679257898233441,0.6371157073958305,0.28662913692654707,,1085,111,GH_l and GS_l are the absorptive-capacity terms of Eq. (32); the re-run omitted them
+spec3_eq32_displacement,G_l,3.8361403549251514,5.19130631337471,0.4601172094317277,,1085,111,GH_l and GS_l are the absorptive-capacity terms of Eq. (32); the re-run omitted them
+spec3_eq32_displacement,FG_l,1.4263949081263751,0.6100433597587621,0.01958450102356406,**,1085,111,GH_l and GS_l are the absorptive-capacity terms of Eq. (32); the re-run omitted them
+spec3_eq32_displacement,GH_l,-0.3034615176027212,8.147272912545432,0.9702958931318264,,1085,111,GH_l and GS_l are the absorptive-capacity terms of Eq. (32); the re-run omitted them
+spec3_eq32_displacement,GS_l,-24.846088901887196,13.587188503730546,0.06776715250073105,*,1085,111,GH_l and GS_l are the absorptive-capacity terms of Eq. (32); the re-run omitted them
+spec3_eq32_displacement,D_term_l,-24.85346968395437,62.94888659099818,0.6930645657326893,,1085,111,GH_l and GS_l are the absorptive-capacity terms of Eq. (32); the re-run omitted them
+spec3_eq32_displacement,log_gdp_l,-17.825829660629363,2.294300463955415,2.0391584698085438e-14,***,1085,111,GH_l and GS_l are the absorptive-capacity terms of Eq. (32); the re-run omitted them
+spec3_eq32_displacement,trade_pct_gdp_l,0.050341761280818575,0.01366678202432108,0.00024304286351836096,***,1085,111,GH_l and GS_l are the absorptive-capacity terms of Eq. (32); the re-run omitted them
+spec3_eq32_displacement,inflation_l,-0.016035943654554862,0.021822566791230114,0.4626227067983308,,1085,111,GH_l and GS_l are the absorptive-capacity terms of Eq. (32); the re-run omitted them
+spec3_eq32_displacement,investment_pct_gdp_l,0.09123623594822985,0.05186176303586984,0.07886241434246362,*,1085,111,GH_l and GS_l are the absorptive-capacity terms of Eq. (32); the re-run omitted them
+spec3_eq32_displacement,pop_growth_l,-0.6044080856530616,0.13774937529253098,1.2736882132681437e-05,***,1085,111,GH_l and GS_l are the absorptive-capacity terms of Eq. (32); the re-run omitted them
+spec3_eq32_displacement,credit_to_private_pct_gdp_l,-0.01878274386753995,0.005967387668814343,0.0016977399854425218,***,1085,111,GH_l and GS_l are the absorptive-capacity terms of Eq. (32); the re-run omitted them
+spec3_eq32_displacement,secondary_enrollment_l,0.005970373310645509,0.013565005316158812,0.6599427756327745,,1085,111,GH_l and GS_l are the absorptive-capacity terms of Eq. (32); the re-run omitted them
+spec1p_eq30p,F_l,0.9670220863854561,0.5610629379397292,0.0850542241721251,*,1316,130,beta4 Gini level drag
+spec1p_eq30p,G_l,2.110778315145127,2.696893353736554,0.433980082539426,,1316,130,beta4 Gini level drag
+spec1p_eq30p,FG_l,1.174812787168058,0.5294869640092618,0.02669446188776685,**,1316,130,beta4 Gini level drag
+spec1p_eq30p,Z_gini_l,-0.23636026412614464,0.9190568501022881,0.7970876466975249,,1316,130,beta4 Gini level drag
+spec1p_eq30p,log_gdp_l,-14.049323107367144,2.0415493811957983,9.64622903276498e-12,***,1316,130,beta4 Gini level drag
+spec1p_eq30p,trade_pct_gdp_l,0.04243002907292165,0.012356253969579394,0.0006159344588712828,***,1316,130,beta4 Gini level drag
+spec1p_eq30p,inflation_l,-0.0268242835798759,0.00786843078600291,0.0006741034009177104,***,1316,130,beta4 Gini level drag
+spec1p_eq30p,investment_pct_gdp_l,0.1311404217916557,0.038052590164092126,0.0005886177884354115,***,1316,130,beta4 Gini level drag
+spec1p_eq30p,pop_growth_l,-0.373687993323968,0.10602715451617699,0.0004408419568881179,***,1316,130,beta4 Gini level drag
+spec1p_eq30p,credit_to_private_pct_gdp_l,-0.013224387769515835,0.005032549760704294,0.008707765609821384,***,1316,130,beta4 Gini level drag
+spec1p_eq30p,secondary_enrollment_l,0.014510030498306275,0.014264608180714181,0.30926748632585876,,1316,130,beta4 Gini level drag
+spec2p_eq31p,F_l,0.6511778828243823,0.7490994875816748,0.3849250063151,,1039,108,"beta10, beta11; full institutional block, which the re-run omitted"
+spec2p_eq31p,G_l,2.7951620088645575,2.6688967498792566,0.29523753179044826,,1039,108,"beta10, beta11; full institutional block, which the re-run omitted"
+spec2p_eq31p,FG_l,1.087049049577611,0.801421951515912,0.17531159038740837,,1039,108,"beta10, beta11; full institutional block, which the re-run omitted"
+spec2p_eq31p,FI_l,-0.11699039707332105,0.8532419538512043,0.8909722638958608,,1039,108,"beta10, beta11; full institutional block, which the re-run omitted"
+spec2p_eq31p,GI_l,0.5292208042822981,0.9580037565094229,0.5807973753741638,,1039,108,"beta10, beta11; full institutional block, which the re-run omitted"
+spec2p_eq31p,GH_l,0.9939423633309868,4.754177812129964,0.8344430825751703,,1039,108,"beta10, beta11; full institutional block, which the re-run omitted"
+spec2p_eq31p,GS_l,-24.01110618512518,14.072999120640903,0.08831870094871598,*,1039,108,"beta10, beta11; full institutional block, which the re-run omitted"
+spec2p_eq31p,FGI_l,-0.40505937232941525,0.6608073990772759,0.5400466023551705,,1039,108,"beta10, beta11; full institutional block, which the re-run omitted"
+spec2p_eq31p,Z_gini_l,0.5260875330776409,1.361247667950783,0.6992365225954724,,1039,108,"beta10, beta11; full institutional block, which the re-run omitted"
+spec2p_eq31p,G_Gini_l,-1.5508546627069033,1.2359468784224883,0.20988012649543383,,1039,108,"beta10, beta11; full institutional block, which the re-run omitted"
+spec2p_eq31p,FG_Gini_l,-0.11755706324482217,0.6992512238556677,0.8665277887765727,,1039,108,"beta10, beta11; full institutional block, which the re-run omitted"
+spec2p_eq31p,log_gdp_l,-17.323863533233197,2.4550122520937667,3.40457470183214e-12,***,1039,108,"beta10, beta11; full institutional block, which the re-run omitted"
+spec2p_eq31p,trade_pct_gdp_l,0.047718860450240784,0.014452904657976296,0.0009988674100588186,***,1039,108,"beta10, beta11; full institutional block, which the re-run omitted"
+spec2p_eq31p,inflation_l,-0.018293953849843787,0.02450310850260188,0.4555014622896483,,1039,108,"beta10, beta11; full institutional block, which the re-run omitted"
+spec2p_eq31p,investment_pct_gdp_l,0.11248843287932056,0.05358530952814838,0.03607344358320096,**,1039,108,"beta10, beta11; full institutional block, which the re-run omitted"
+spec2p_eq31p,pop_growth_l,-0.6683442517906959,0.19367402187825195,0.0005847367082811731,***,1039,108,"beta10, beta11; full institutional block, which the re-run omitted"
+spec2p_eq31p,credit_to_private_pct_gdp_l,-0.014216842626830884,0.005343348437101262,0.007937392426127064,***,1039,108,"beta10, beta11; full institutional block, which the re-run omitted"
+spec2p_eq31p,secondary_enrollment_l,0.007688694216978927,0.013909036845704957,0.5805483801499344,,1039,108,"beta10, beta11; full institutional block, which the re-run omitted"
+spec3p_eq32p,F_l,0.6169818763908884,0.6821152842413618,0.36596436679515365,,1039,108,beta7 displacement x inequality
+spec3p_eq32p,G_l,0.9374938378418072,5.334293136197266,0.8605308728859323,,1039,108,beta7 displacement x inequality
+spec3p_eq32p,FG_l,1.1776793221028097,0.6261823062752763,0.06032966891569978,*,1039,108,beta7 displacement x inequality
+spec3p_eq32p,GH_l,3.6459723675442994,8.037634325198933,0.6502164176950597,,1039,108,beta7 displacement x inequality
+spec3p_eq32p,GS_l,-22.10570720597521,13.881669912159209,0.11163538012218689,,1039,108,beta7 displacement x inequality
+spec3p_eq32p,D_term_l,9.718728650460937,60.17680411473746,0.8717333709128917,,1039,108,beta7 displacement x inequality
+spec3p_eq32p,D_Gini_l,-9.47327001568872,14.828100037032021,0.5230673262704679,,1039,108,beta7 displacement x inequality
+spec3p_eq32p,log_gdp_l,-17.066965887327594,2.396655327518752,2.181051343181704e-12,***,1039,108,beta7 displacement x inequality
+spec3p_eq32p,trade_pct_gdp_l,0.04882974508850159,0.014184544517305029,0.0006028599212324319,***,1039,108,beta7 displacement x inequality
+spec3p_eq32p,inflation_l,-0.018596382474441942,0.023311163047509142,0.42522728114379515,,1039,108,beta7 displacement x inequality
+spec3p_eq32p,investment_pct_gdp_l,0.11223225672606571,0.052632152317400704,0.0332434713480415,**,1039,108,beta7 displacement x inequality
+spec3p_eq32p,pop_growth_l,-0.6929569554265222,0.18789108969924817,0.00023942107338871193,***,1039,108,beta7 displacement x inequality
+spec3p_eq32p,credit_to_private_pct_gdp_l,-0.015220609721298888,0.0062169598963873526,0.014544521361730331,**,1039,108,beta7 displacement x inequality
+spec3p_eq32p,secondary_enrollment_l,0.0071829540228206465,0.014340599135739904,0.6165756699149609,,1039,108,beta7 displacement x inequality
+spec4p_eq33p,F_l,0.3413180883682675,0.7490668217437957,0.6487216979027298,,1316,130,"delta4', phi1, phi4 - the headline primed spec"
+spec4p_eq33p,G_l,1.9710657287267905,2.90543266566184,0.4976494775276255,,1316,130,"delta4', phi1, phi4 - the headline primed spec"
+spec4p_eq33p,FG_l,1.5628787686676802,0.6571931906098598,0.01756334500380995,**,1316,130,"delta4', phi1, phi4 - the headline primed spec"
+spec4p_eq33p,MI_l,1.5471557996234737,0.8480661228815662,0.06835963627577013,*,1316,130,"delta4', phi1, phi4 - the headline primed spec"
+spec4p_eq33p,F_MI_l,0.9575969556140514,0.7740887020665684,0.21631470953073004,,1316,130,"delta4', phi1, phi4 - the headline primed spec"
+spec4p_eq33p,G_MI_l,-0.4275909152689045,1.2769973815016953,0.7378058734128814,,1316,130,"delta4', phi1, phi4 - the headline primed spec"
+spec4p_eq33p,FG_MI_l,-1.0632720519114283,0.8882976011031007,0.23156081487097596,,1316,130,"delta4', phi1, phi4 - the headline primed spec"
+spec4p_eq33p,Z_gini_l,-0.6036538644873233,0.9173052925112464,0.5106222364479923,,1316,130,"delta4', phi1, phi4 - the headline primed spec"
+spec4p_eq33p,Gini_MI_l,0.5985601236914333,0.6082204385001451,0.32526387120974004,,1316,130,"delta4', phi1, phi4 - the headline primed spec"
+spec4p_eq33p,G_Gini_MI_l,0.3271908257122505,1.1148405702202584,0.7692028805309143,,1316,130,"delta4', phi1, phi4 - the headline primed spec"
+spec4p_eq33p,FG_Gini_MI_l,0.8018427022540495,0.8445070066115019,0.34257487731163033,,1316,130,"delta4', phi1, phi4 - the headline primed spec"
+spec4p_eq33p,log_gdp_l,-14.308999181260248,2.2281414703172593,1.9608651302298067e-10,***,1316,130,"delta4', phi1, phi4 - the headline primed spec"
+spec4p_eq33p,trade_pct_gdp_l,0.040933414543895,0.012717611749848234,0.001323799104169547,***,1316,130,"delta4', phi1, phi4 - the headline primed spec"
+spec4p_eq33p,inflation_l,-0.025877089671864882,0.008273091620272417,0.001804831182261881,***,1316,130,"delta4', phi1, phi4 - the headline primed spec"
+spec4p_eq33p,investment_pct_gdp_l,0.1298985258914728,0.03954675170287679,0.0010515857646821761,***,1316,130,"delta4', phi1, phi4 - the headline primed spec"
+spec4p_eq33p,pop_growth_l,-0.3731276040774068,0.11379841563807938,0.0010733663793123978,***,1316,130,"delta4', phi1, phi4 - the headline primed spec"
+spec4p_eq33p,credit_to_private_pct_gdp_l,-0.013787101576524486,0.0052876356797938225,0.009240157543843868,***,1316,130,"delta4', phi1, phi4 - the headline primed spec"
+spec4p_eq33p,secondary_enrollment_l,0.01347918631206944,0.014428133432497353,0.3503806751469924,,1316,130,"delta4', phi1, phi4 - the headline primed spec"
+tercile_test_mi,FG_l_T1_low,-0.340069922829636,0.9571314811065028,0.7224977711384698,,657,73,"terciles cut on the raw 0-1 Gini inside the MI sample, as in the notebook"
+tercile_test_mi,FG_l_T2_mid,1.3260221111026973,0.9780541161448096,0.17571698666738547,,657,73,"terciles cut on the raw 0-1 Gini inside the MI sample, as in the notebook"
+tercile_test_mi,FG_l_T3_high,1.3667088701298318,0.878608029456119,0.12038274215795923,,657,73,"terciles cut on the raw 0-1 Gini inside the MI sample, as in the notebook"
+tercile_test_mi,F_l,1.4790186992166576,0.8666439378443873,0.08844992162181384,*,657,73,"terciles cut on the raw 0-1 Gini inside the MI sample, as in the notebook"
+tercile_test_mi,G_l,0.21674931907833891,3.4392543281783916,0.9497713269661617,,657,73,"terciles cut on the raw 0-1 Gini inside the MI sample, as in the notebook"
+tercile_test_mi,log_gdp_l,-13.914770336144196,3.782184620057101,0.00025672458500776755,***,657,73,"terciles cut on the raw 0-1 Gini inside the MI sample, as in the notebook"
+tercile_test_mi,trade_pct_gdp_l,0.07867960636063313,0.019663619829914922,7.146816808421429e-05,***,657,73,"terciles cut on the raw 0-1 Gini inside the MI sample, as in the notebook"
+tercile_test_mi,inflation_l,-0.026816304743667318,0.009350706389529206,0.004288573470631651,***,657,73,"terciles cut on the raw 0-1 Gini inside the MI sample, as in the notebook"
+tercile_test_mi,investment_pct_gdp_l,0.12294587727180073,0.052346512074941294,0.019186133060544158,**,657,73,"terciles cut on the raw 0-1 Gini inside the MI sample, as in the notebook"
+tercile_test_mi,pop_growth_l,-0.5192855502595745,0.27769794389383634,0.06201014010150104,*,657,73,"terciles cut on the raw 0-1 Gini inside the MI sample, as in the notebook"
+tercile_test_mi,credit_to_private_pct_gdp_l,-0.012419891568960064,0.023910653217296466,0.6036667027436716,,657,73,"terciles cut on the raw 0-1 Gini inside the MI sample, as in the notebook"
+tercile_test_mi,secondary_enrollment_l,-0.02118400780722402,0.025488602888974775,0.4062618296416592,,657,73,"terciles cut on the raw 0-1 Gini inside the MI sample, as in the notebook"
+spec15_eq49_ai_to_gini,G_l,0.005292761963299881,0.022137341436543497,0.8110925817071056,,1024,108,"dependent variable is the raw 0-1 Gini share, not the z-score"
+spec15_eq49_ai_to_gini,G_1mH_l,-0.01058196174979434,0.023596714310053602,0.6539367868141014,,1024,108,"dependent variable is the raw 0-1 Gini share, not the z-score"
+spec15_eq49_ai_to_gini,F_l,-0.002625133946078644,0.003901506602975731,0.5012159458044,,1024,108,"dependent variable is the raw 0-1 Gini share, not the z-score"
+spec15_eq49_ai_to_gini,sigma_kis_l,0.039378290092496084,0.04372177168401537,0.36801390225594055,,1024,108,"dependent variable is the raw 0-1 Gini share, not the z-score"
+spec15_eq49_ai_to_gini,log_gdp_l,-0.0135837648555894,0.011345655595728718,0.23152070712144965,,1024,108,"dependent variable is the raw 0-1 Gini share, not the z-score"
+spec15_eq49_ai_to_gini,trade_pct_gdp_l,3.094562093709849e-05,7.678230174019476e-05,0.6870221474771265,,1024,108,"dependent variable is the raw 0-1 Gini share, not the z-score"
+spec15_eq49_ai_to_gini,inflation_l,0.0001358402061136481,8.111879875911712e-05,0.0943661070623807,*,1024,108,"dependent variable is the raw 0-1 Gini share, not the z-score"
+spec15_eq49_ai_to_gini,investment_pct_gdp_l,-0.00011358377268858298,0.00010941381290027767,0.2994990015632457,,1024,108,"dependent variable is the raw 0-1 Gini share, not the z-score"
+spec15_eq49_ai_to_gini,pop_growth_l,0.00011221556247729606,0.0007086467255257248,0.874215307317327,,1024,108,"dependent variable is the raw 0-1 Gini share, not the z-score"
+spec15_eq49_ai_to_gini,credit_to_private_pct_gdp_l,-8.291999847570981e-06,4.621847606653321e-05,0.8576574458289986,,1024,108,"dependent variable is the raw 0-1 Gini share, not the z-score"
+spec15_eq49_ai_to_gini,secondary_enrollment_l,0.0001411364027438872,8.507462856777584e-05,0.09747263346255824,*,1024,108,"dependent variable is the raw 0-1 Gini share, not the z-score"
+spec16_eq50_mediated,F_l,0.3206625573884248,0.9113297271917812,0.7250245593399788,,1024,108,theta; gini_hat fitted from Eq. (49)
+spec16_eq50_mediated,G_l,2.0118947375058136,3.141139989121555,0.5220130241075129,,1024,108,theta; gini_hat fitted from Eq. (49)
+spec16_eq50_mediated,FG_l,1.5712646169503695,0.5335207532174946,0.003312431864221642,***,1024,108,theta; gini_hat fitted from Eq. (49)
+spec16_eq50_mediated,gini_hat,-153.89582860810802,163.86930331785533,0.347914031408039,,1024,108,theta; gini_hat fitted from Eq. (49)
+spec16_eq50_mediated,log_gdp_l,-18.952625918638574,2.691225773820104,3.771287013288943e-12,***,1024,108,theta; gini_hat fitted from Eq. (49)
+spec16_eq50_mediated,trade_pct_gdp_l,0.05181083385764946,0.013787600739507733,0.0001825551595557208,***,1024,108,theta; gini_hat fitted from Eq. (49)
+spec16_eq50_mediated,inflation_l,0.005988517060152692,0.03518507397759343,0.8648910125585627,,1024,108,theta; gini_hat fitted from Eq. (49)
+spec16_eq50_mediated,investment_pct_gdp_l,0.08721403798959436,0.06668701689117816,0.19127386953233816,,1024,108,theta; gini_hat fitted from Eq. (49)
+spec16_eq50_mediated,pop_growth_l,-0.8641842531905751,0.338938819398332,0.010948376793629075,**,1024,108,theta; gini_hat fitted from Eq. (49)
+spec16_eq50_mediated,credit_to_private_pct_gdp_l,-0.01791748263757856,0.006260507679138243,0.004308340285364986,***,1024,108,theta; gini_hat fitted from Eq. (49)
+spec16_eq50_mediated,secondary_enrollment_l,0.022318962193554802,0.028749042494791224,0.4377552559369894,,1024,108,theta; gini_hat fitted from Eq. (49)
+spec18_eq54_resilience,F_l,1.1073125841580331,0.5528875114196379,0.04543316566744458,**,1316,130,"omega, xi; the re-run ran F_Shock without Z_gini_l, Gini_Shock and FG_Shock"
+spec18_eq54_resilience,G_l,2.698332284542658,2.7356360653542335,0.32416032833339636,,1316,130,"omega, xi; the re-run ran F_Shock without Z_gini_l, Gini_Shock and FG_Shock"
+spec18_eq54_resilience,FG_l,0.9484182430629979,0.5392196089111522,0.0788628967695984,*,1316,130,"omega, xi; the re-run ran F_Shock without Z_gini_l, Gini_Shock and FG_Shock"
+spec18_eq54_resilience,Z_gini_l,-0.3071541779614403,0.9277003773882617,0.7406347890513998,,1316,130,"omega, xi; the re-run ran F_Shock without Z_gini_l, Gini_Shock and FG_Shock"
+spec18_eq54_resilience,F_Shock,0.6135072551806643,0.40724611151559287,0.13221680077610734,,1316,130,"omega, xi; the re-run ran F_Shock without Z_gini_l, Gini_Shock and FG_Shock"
+spec18_eq54_resilience,Gini_Shock,-0.07900823718482879,0.2092142112959755,0.7057650619645859,,1316,130,"omega, xi; the re-run ran F_Shock without Z_gini_l, Gini_Shock and FG_Shock"
+spec18_eq54_resilience,FG_Shock,0.520659823549169,0.38848893246419614,0.18043695241279767,,1316,130,"omega, xi; the re-run ran F_Shock without Z_gini_l, Gini_Shock and FG_Shock"
+spec18_eq54_resilience,log_gdp_l,-13.985429281646104,2.039325133224709,1.1339287273160035e-11,***,1316,130,"omega, xi; the re-run ran F_Shock without Z_gini_l, Gini_Shock and FG_Shock"
+spec18_eq54_resilience,trade_pct_gdp_l,0.04204929919061857,0.011879629590870178,0.00041657939243828406,***,1316,130,"omega, xi; the re-run ran F_Shock without Z_gini_l, Gini_Shock and FG_Shock"
+spec18_eq54_resilience,inflation_l,-0.026453088960564405,0.00806823257077792,0.001073917933379379,***,1316,130,"omega, xi; the re-run ran F_Shock without Z_gini_l, Gini_Shock and FG_Shock"
+spec18_eq54_resilience,investment_pct_gdp_l,0.12144892409335911,0.038469075150917256,0.0016348023904769558,***,1316,130,"omega, xi; the re-run ran F_Shock without Z_gini_l, Gini_Shock and FG_Shock"
+spec18_eq54_resilience,pop_growth_l,-0.3872822718215953,0.09795668094639899,8.163902260647094e-05,***,1316,130,"omega, xi; the re-run ran F_Shock without Z_gini_l, Gini_Shock and FG_Shock"
+spec18_eq54_resilience,credit_to_private_pct_gdp_l,-0.013770651295859726,0.005098412812854067,0.00701449614315041,***,1316,130,"omega, xi; the re-run ran F_Shock without Z_gini_l, Gini_Shock and FG_Shock"
+spec18_eq54_resilience,secondary_enrollment_l,0.017724186207936317,0.014400147313043423,0.21863458582637502,,1316,130,"omega, xi; the re-run ran F_Shock without Z_gini_l, Gini_Shock and FG_Shock"
+spec17_eq52_iv_post2015,gini,238.00380798768128,150.34801788501184,0.113417074649736,,1146,109,first-stage F=2.85
+spec17_eq52_iv_post2017,gini,189.43588800662906,99.5206629479168,0.05697755256653326,*,1146,109,first-stage F=4.20
+spec17_eq52_iv_post2020,gini,64.9046863098027,44.5219483832151,0.1448920248333496,,1146,109,first-stage F=6.56
+spec17_eq52_iv_trend,gini,98.80981236993448,56.53677369406228,0.08051447814732388,*,1146,109,first-stage F=5.57

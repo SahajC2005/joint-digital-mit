@@ -1,0 +1,14 @@
+quantity,source,spec,param,published,recovered,std_error,p_value,stars,n_obs,n_countries,predicted_sign,gap,verdict
+"beta6 displacement (Eqs. 13, 32)",report S3.2,spec3_eq32_displacement,D_term_l,-24.85,-24.8535,62.9489,0.6931,,1085,111,-,0.0035,reproduces
+beta4 Gini level (Eq. 30'),report S4,spec1p_eq30p,Z_gini_l,-0.236,-0.2364,0.9191,0.7971,,1316,130,-,0.0004,reproduces
+beta10 G x Gini (Eq. 31'),report S4,spec2p_eq31p,G_Gini_l,-1.551,-1.5509,1.2359,0.2099,,1039,108,-,0.0001,reproduces
+beta11 F x G x Gini (key),report S4,spec2p_eq31p,FG_Gini_l,-0.118,-0.1176,0.6993,0.8665,,1039,108,-,0.0004,reproduces
+beta7 D x Gini (Eq. 32'),report S4,spec3p_eq32p,D_Gini_l,-9.473,-9.4733,14.8281,0.5231,,1039,108,-,0.0003,reproduces
+phi4 F x G x Gini x MI (key),report S4,spec4p_eq33p,FG_Gini_MI_l,0.802,0.8018,0.8445,0.3426,,1316,130,-,0.0002,reproduces
+gamma1 AI -> inequality (Eq. 49),report S4,spec15_eq49_ai_to_gini,G_l,0.005,0.0053,0.0221,0.8111,,1024,108,+,0.0003,reproduces
+theta inequality -> growth (Eq. 50),report S4,spec16_eq50_mediated,gini_hat,-153.9,-153.8958,163.8693,0.3479,,1024,108,-,0.0042,reproduces
+omega F x Shock (Eq. 54),report S4,spec18_eq54_resilience,F_Shock,0.614,0.6135,0.4072,0.1322,,1316,130,+,0.0005,reproduces
+"top Gini tercile, MI sample",report S4,tercile_test_mi,FG_l_T3_high,1.37,1.3667,0.8786,0.1204,,657,73,?,0.0033,reproduces
+"mid Gini tercile, MI sample",report S4,tercile_test_mi,FG_l_T2_mid,1.326,1.326,0.9781,0.1757,,657,73,?,0.0,reproduces
+"low Gini tercile, MI sample",report S4,tercile_test_mi,FG_l_T1_low,-0.34,-0.3401,0.9571,0.7225,,657,73,?,0.0001,reproduces
+"theta_IV, post2017 Bartik",report S4,spec17_eq52_iv_post2017,gini,189.44,189.4359,99.5207,0.057,*,1146,109,-,0.0041,reproduces

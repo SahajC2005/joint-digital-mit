@@ -1,0 +1,135 @@
+panel: 3,255 rows x 139 cols, 217 countries, 2010-2024
+gini (0-1 share, SWIID disposable, ffill<=3y): coverage 0.746, mean 0.380, sd 0.077
+
+########################################################################
+# Spec 3 (Eq.32) - displacement drag, beta6
+########################################################################
+
+== spec3_eq32_displacement ==  N=1,085  countries=111
+   FG_l               +1.4264  se=  0.6100  p=0.0196 **
+   GH_l               -0.3035  se=  8.1473  p=0.9703 
+   GS_l              -24.8461  se= 13.5872  p=0.0678 *
+   D_term_l          -24.8535  se= 62.9489  p=0.6931 
+
+########################################################################
+# Primed specifications - the Section 4 table
+########################################################################
+
+== spec1p_eq30p ==  N=1,316  countries=130
+   FG_l               +1.1748  se=  0.5295  p=0.0267 **
+   Z_gini_l           -0.2364  se=  0.9191  p=0.7971 
+
+== spec2p_eq31p ==  N=1,039  countries=108
+   FG_l               +1.0870  se=  0.8014  p=0.1753 
+   Z_gini_l           +0.5261  se=  1.3612  p=0.6992 
+   G_Gini_l           -1.5509  se=  1.2359  p=0.2099 
+   FG_Gini_l          -0.1176  se=  0.6993  p=0.8665 
+
+== spec3p_eq32p ==  N=1,039  countries=108
+   D_term_l           +9.7187  se= 60.1768  p=0.8717 
+   D_Gini_l           -9.4733  se= 14.8281  p=0.5231 
+
+== spec4p_eq33p ==  N=1,316  countries=130
+   FG_l               +1.5629  se=  0.6572  p=0.0176 **
+   FG_MI_l            -1.0633  se=  0.8883  p=0.2316 
+   Z_gini_l           -0.6037  se=  0.9173  p=0.5106 
+   FG_Gini_MI_l       +0.8018  se=  0.8445  p=0.3426 
+
+########################################################################
+# Tercile test - F x G by Gini tercile inside the middle-income sample
+########################################################################
+
+== tercile_test_mi ==  N=657  countries=73
+   FG_l_T1_low        -0.3401  se=  0.9571  p=0.7225 
+   FG_l_T2_mid        +1.3260  se=  0.9781  p=0.1757 
+   FG_l_T3_high       +1.3667  se=  0.8786  p=0.1204 
+
+########################################################################
+# Spec 15 (Eq.49) first stage and Spec 16 (Eqs.50-51) mediated growth
+########################################################################
+
+== spec15_eq49_ai_to_gini ==  N=1,024  countries=108
+   G_l                +0.0053  se=  0.0221  p=0.8111 
+   G_1mH_l            -0.0106  se=  0.0236  p=0.6539 
+   F_l                -0.0026  se=  0.0039  p=0.5012 
+   sigma_kis_l        +0.0394  se=  0.0437  p=0.3680 
+
+gini_hat: mean 0.3563, sd 0.0119 (raw gini sd in this sample 0.0713) - the fitted values exclude the entity and time effects, which is why theta is two orders of magnitude larger than the coefficient on raw Gini
+
+== spec16_eq50_mediated ==  N=1,024  countries=108
+   FG_l               +1.5713  se=  0.5335  p=0.0033 ***
+   gini_hat         -153.8958  se=163.8693  p=0.3479 
+
+Indirect AI-through-inequality effect gamma1 x theta = 0.0053 x -153.896 = -0.8145 pp of growth per unit G
+
+########################################################################
+# Spec 18 (Eq.54) - resilience with inequality
+########################################################################
+
+== spec18_eq54_resilience ==  N=1,316  countries=130
+   F_Shock            +0.6135  se=  0.4072  p=0.1322 
+   Gini_Shock         -0.0790  se=  0.2092  p=0.7058 
+   FG_Shock           +0.5207  se=  0.3885  p=0.1804 
+
+########################################################################
+# Spec 17 (Eqs.52-53) - historical-Gini Bartik IV for theta
+########################################################################
+instrument  first_stage_F  theta_iv  p_value  n_obs
+  post2015           2.85    238.00   0.1134   1146
+  post2017           4.20    189.44   0.0570   1146
+  post2020           6.56     64.90   0.1449   1146
+     trend           5.57     98.81   0.0805   1146
+All four first-stage F statistics are below the weak-instrument threshold of 10, so theta_IV is uninterpretable - the report's reading.
+
+########################################################################
+# 41-quantity scorecard, recounted with the recovered specifications
+########################################################################
+verdict
+reproduces                        29
+close                              8
+same sign, different magnitude     3
+SIGN FLIP                          1
+
+still not exact (12):
+                    quantity      source  published     rerun                        verdict
+  psi4 vulnerability -> exit report §3.3      1.223    1.4413                          close
+       exit rate, vulnerable report §3.3      0.240    0.1875                          close
+    beta3, between estimator   report §5     -0.581   -0.9816 same sign, different magnitude
+   delta4, between estimator   report §5      0.158    0.1183 same sign, different magnitude
+          threshold on F x G   report §2      0.351    0.3690                          close
+       slope below threshold   report §2     -1.550   -1.5706                          close
+   F within/between SD ratio    playbook      0.280    0.3358                          close
+   G within/between SD ratio    playbook      0.090    0.1022                          close
+         beta3 (memo figure)        memo      1.014    1.0956                          close
+      income threshold (PPP)        memo   6216.000 6947.7148                          close
+F x G below income threshold        memo      2.780    1.9788 same sign, different magnitude
+F x G above income threshold        memo     -0.270    0.2296                      SIGN FLIP
+
+wrote /Users/sahajchhetri/Research/joint-digital-mit/outputs/rerun/rerun_vs_published_recounted.csv
+
+########################################################################
+# SECTION 4 SCORECARD - recovered specification vs published value
+########################################################################
+                           quantity  published  recovered  p_value stars  n_obs    verdict
+   beta6 displacement (Eqs. 13, 32)    -24.850   -24.8535   0.6931         1085 reproduces
+         beta4 Gini level (Eq. 30')     -0.236    -0.2364   0.7971         1316 reproduces
+          beta10 G x Gini (Eq. 31')     -1.551    -1.5509   0.2099         1039 reproduces
+          beta11 F x G x Gini (key)     -0.118    -0.1176   0.8665         1039 reproduces
+           beta7 D x Gini (Eq. 32')     -9.473    -9.4733   0.5231         1039 reproduces
+       phi4 F x G x Gini x MI (key)      0.802     0.8018   0.3426         1316 reproduces
+   gamma1 AI -> inequality (Eq. 49)      0.005     0.0053   0.8111         1024 reproduces
+theta inequality -> growth (Eq. 50)   -153.900  -153.8958   0.3479         1024 reproduces
+           omega F x Shock (Eq. 54)      0.614     0.6135   0.1322         1316 reproduces
+        top Gini tercile, MI sample      1.370     1.3667   0.1204          657 reproduces
+        mid Gini tercile, MI sample      1.326     1.3260   0.1757          657 reproduces
+        low Gini tercile, MI sample     -0.340    -0.3401   0.7225          657 reproduces
+          theta_IV, post2017 Bartik    189.440   189.4359   0.0570     *   1146 reproduces
+
+verdict counts:
+verdict
+reproduces    13
+
+wrote /Users/sahajchhetri/Research/joint-digital-mit/outputs/rerun/section4_coefficients.csv
+wrote /Users/sahajchhetri/Research/joint-digital-mit/outputs/rerun/section4_vs_published.csv
+wrote /Users/sahajchhetri/Research/joint-digital-mit/outputs/rerun/section4_iv_first_stage.csv
+wrote /Users/sahajchhetri/Research/joint-digital-mit/outputs/rerun/section4_log.txt

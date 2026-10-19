@@ -1,5 +1,11 @@
 # Re-run notes — what reproduces and what does not
 
+> **Superseded in one place (2026-10-19).** Everything below is left exactly as it was
+> written. The §4 specifications it could not find have since been recovered from
+> `notebooks/joint_digital_mit_analysis.ipynb` and all of them reproduce — see
+> **[Addendum — §4 recovered](#addendum--4-recovered-2026-10-19)** at the end. Read the
+> addendum before acting on anything this note says about §4 being unreconstructible.
+
 Run locally on 2026-10-18. Before this, nothing in the repository had been executed: the
 report, the memo and the playbook were written from runs whose outputs are not on disk.
 This note records what happens when the committed code is pointed at the committed panel.
@@ -162,3 +168,133 @@ supported.
 3. **Then measurement**, as the playbook already says: `01_rebuild_F.py` and `02_rebuild_G.py`
    are the highest-value change, and the re-run confirms why — the wave-years-only β₃ of
    −0.062 is what the interpolation is covering up.
+
+---
+
+# Addendum — §4 recovered (2026-10-19)
+
+The verdicts above stand as written: they record what the committed `code/` produces.
+This addendum records what happened the next day, when the §4 specifications were
+found. **Every one of them reproduces.** The gap was never in the data and never in
+the published numbers — it was that `04_rerun_verify.py` and `05_spec_probes.py`
+guessed the regressor sets, and guessed five of them wrong.
+
+## Where the specifications were
+
+In `notebooks/joint_digital_mit_analysis.ipynb`, which is in this repository and was
+tracked all along. It is the notebook the report was written from: its stored cell
+outputs print β₃ = 1.0956 on N = 1,380 and every Section 4 coefficient in the
+published table, to four decimals. Nothing had to be reconstructed or re-derived —
+the cell sources give the regressor lists directly.
+
+The notebook loads `final_panel (12).csv` (3,474 × 42), applies the sample hygiene
+and Kalman imputation of its §0b–0c, saves `final_panel_imputed.csv` at 3,255 × 50,
+and then builds the constructed regressors in its §1–2 and §16. The committed
+`final_panel_imputed__5_.csv` (3,255 × 139) **is that panel after those constructions**
+— it already carries `gini`, `Z_gini`, `G_Gini_l`, `FG_Gini_l`, `D_Gini_l`,
+`Gini_MI_l`, `G_Gini_MI_l`, `FG_Gini_MI_l`, `G_1mH_l`, `sigma_kis_l`, `Shock`,
+`F_Shock`, `Gini_Shock` and `FG_Shock`. So no regressor had to be rebuilt to recover
+§4; only the right columns had to be put on the right side of the right equation.
+
+## What the earlier probes got wrong
+
+| quantity | the specification it actually comes from | what the re-run ran instead |
+|---|---|---|
+| **β₆ displacement** | Spec 3 (Eq. 32): `F_l G_l FG_l` **`GH_l GS_l`** `D_term_l` + controls | omitted `GH_l`, `GS_l`. The probe that came closest (−27.15) added `I_l`/`GI_l` as well — one block too many |
+| **β₁₁ F×G×Gini** | Spec 2′ (Eq. 31′): `F_l G_l FG_l` **`FI_l GI_l GH_l GS_l FGI_l`** `Z_gini_l G_Gini_l FG_Gini_l` + controls | ran the Gini terms on the Eq. 30′ set, without the institutional block. That is why the sign looked unstable: the published cell is the one *with* it |
+| **ω F×Shock** | Spec 18 (Eq. 54): `F_l G_l FG_l` **`Z_gini_l`** `F_Shock` **`Gini_Shock FG_Shock`** + controls | ran `F_Shock` with only the baseline. Dropping `FG_Shock` loads the joint-digital part of the COVID response onto `F_Shock`, which is what made it significant |
+| **θ inequality → growth** | Spec 16 (Eqs. 50–51), **two-step**: fit Eq. (49), take the fitted `gini_hat`, regress growth on `F_l G_l FG_l gini_hat` + controls | regressed growth on `Z_gini_l` directly. `gini_hat` is a *within-model fitted value* — it excludes the entity and time effects, so its SD is 0.012 against 0.071 for the raw Gini. The published −153.9 is a coefficient on a variable six times less variable than Gini itself, which is the whole explanation of the "magnitude matches no Gini scale" puzzle |
+| **γ₁ AI → inequality** | Spec 15 (Eq. 49): dependent variable `gini` (raw 0–1 SWIID share), regressors `G_l` **`G_1mH_l`** `F_l` **`sigma_kis_l`** + controls | used `Z_gini_l` as the dependent variable and `F_l G_l FG_l` as regressors. `G_1mH_l` is the skill-bias term of Eq. (49) and is collinear with `G_l`; omitting it is what flips γ₁'s sign |
+
+The pattern is one thing, not five: the primed equations each carry a block of terms
+that the unprimed equations do not, and the probes reconstructed the primed equations
+by adding Gini terms to the *unprimed* regressor sets. Four of the five "failures"
+were that omission.
+
+## The recovered table
+
+`code/06_recover_section4.py` estimates all of them on the committed panel and scores
+each against the published value. Results in `outputs/rerun/section4_vs_published.csv`,
+`section4_coefficients.csv`, `section4_iv_first_stage.csv` and `section4_log.txt`.
+
+| quantity | published | recovered | p | N | verdict |
+|---|---|---|---|---|---|
+| β₆ displacement (Eq. 32) | −24.85 n.s. | **−24.8535** | 0.693 | 1,085 | reproduces |
+| β₄ Gini level (Eq. 30′) | −0.236 | −0.2364 | 0.797 | 1,316 | reproduces |
+| β₁₀ G×Gini (Eq. 31′) | −1.551 | −1.5509 | 0.210 | 1,039 | reproduces |
+| **β₁₁ F×G×Gini (key)** | −0.118 | **−0.1176** | 0.867 | 1,039 | reproduces |
+| β₇ D×Gini (Eq. 32′) | −9.473 | −9.4733 | 0.523 | 1,039 | reproduces |
+| **φ₄ F×G×Gini×MI (key)** | +0.802 | **+0.8018** | 0.343 | 1,316 | reproduces |
+| γ₁ AI → inequality (Eq. 49) | +0.005 | +0.0053 | 0.811 | 1,024 | reproduces |
+| θ inequality → growth (Eq. 50) | −153.9 | −153.8958 | 0.348 | 1,024 | reproduces |
+| ω F×Shock (Eq. 54) | +0.614 n.s. | **+0.6135 n.s.** | 0.132 | 1,316 | reproduces |
+| FG, top Gini tercile (MI) | 1.37 | +1.3667 | 0.120 | 657 | reproduces |
+| FG, mid Gini tercile (MI) | 1.326 | +1.3260 | 0.176 | 657 | reproduces |
+| FG, low Gini tercile (MI) | −0.340 | −0.3401 | 0.723 | 657 | reproduces |
+| θ_IV, post-2017 Bartik | 189.4*, F = 4.2 | +189.4359*, F = 4.20 | 0.057 | 1,146 | reproduces |
+
+13 of 13, to four decimals. The Bartik first-stage F statistics reproduce across all
+four instruments as well (2.85 / 4.20 / 6.56 / 5.57 against the report's "4.2, range
+2.8–6.6"), so the report's grounds for discarding the IV are correct as stated.
+
+**The §4 table can be quoted as written.** The earlier instruction not to quote it is
+withdrawn, and only that instruction — nothing else in these notes changes.
+
+This scorecard does not replace the 41-quantity scorecard above; it corrects ten rows of
+it. `outputs/rerun/rerun_vs_published_recounted.csv` is that file with those rows replaced
+in place. Recounted:
+
+| verdict | was | now |
+|---|---|---|
+| reproduces | 20 | **29** |
+| close | 10 | 8 |
+| same sign, different magnitude | 7 | 3 |
+| sign flip | 4 | **1** |
+
+Three of the four sign flips were β₆, β₁₁ and γ₁ and all three are recovered. The one that
+remains is "F×G above the income threshold" (−0.27 published, +0.23 here) — a memo figure,
+insignificant, at a grid point the memo and the re-run do not share ($6,216 vs $6,948 PPP),
+so it is a grid difference rather than a specification one and is not recoverable by this
+route. The twelve quantities still not exact are all outside §4: the ψ₄ event count and the
+two exit rates, the two grid-dependent threshold searches, the two between-estimator
+coefficients, the measurement SD ratios, and the three memo figures that come from a sample
+23 observations larger than this repository contains.
+
+## What this does and does not change substantively
+
+Nothing substantive. The recovered §4 says exactly what the report says it says:
+
+- β₁₁ = −0.118 is correctly signed and nowhere near significant (p = 0.87).
+- φ₄ = **+0.802 is wrong-signed**, as published. The rescue fails.
+- The tercile ordering is backwards as published — the *top*-inequality tercile shows the
+  largest joint-digital effect (+1.37), not the smallest.
+- ω = +0.614 is insignificant (p = 0.13), as published. **The re-run's claim that it is
+  significant was a specification artifact** and should be disregarded; it came from
+  dropping `FG_Shock` from Eq. (54).
+- The IV is weak and θ_IV is uninterpretable, as published.
+
+So the one place where the re-run looked *stronger* than the paper turns out to be the
+re-run's error, and the two "wrong-signed or significant here" consolations noted above
+go away. §4 fails, and it fails exactly the way the report already says it does.
+
+## What this changes about the repository
+
+The claim in the main notes that "§4's estimates are not reconstructible from this
+repository" was wrong, and it was wrong in an instructive way: the specifications were
+in a tracked notebook the whole time, and the probe script guessed at them instead of
+reading it. `inequality_analysis.py` and `reframed_analysis.py` are indeed not the
+source of the §4 table — that part was right — but `notebooks/joint_digital_mit_analysis.ipynb`
+is, and it is the authoritative record for every specification in the report, not only
+§4. Anything else that needs checking should be read out of it before being re-derived.
+
+`code/06_recover_section4.py` now puts the §4 specifications into `code/` as a script,
+so the next run does not depend on the notebook.
+
+## Environment for the addendum
+
+`linearmodels` 7.1 (as before), pandas 3.0.6, numpy 2.5.4, statsmodels 0.15.0, in a
+throwaway virtualenv outside the project — nothing was installed into the repository.
+pandas and numpy are newer than the 2026-10-18 run (2.2.3 / 2.2.3) and newer still than
+`code/requirements.txt`; the four-decimal agreement with the notebook's stored Colab
+outputs, computed on a third set of versions again, is the evidence that this does not
+matter for these estimates.
