@@ -1,9 +1,11 @@
 # Results memo — Joint Digital Transformation & the Middle-Income Trap
 
-*Rewritten 2026-10-19 against the re-run (`docs/RERUN_NOTES.md`). The earlier version of this
-memo led with an "escape dividend" of β₃ = +1.014\*\* on N=1,403. That sample is not in this
-repository and that framing is not what the data support; both are corrected below. The
-figures the re-run did not touch are marked **unverified** rather than deleted.*
+*Rewritten 2026-10-19 against the re-run (`docs/RERUN_NOTES.md` and its §4 addendum of the
+same day). The earlier version of this memo led with an "escape dividend" of β₃ = +1.014\*\*
+on N=1,403. That sample is not in this repository and that framing is not what the data
+support; both are corrected below. Of the 41 published quantities, 29 now reproduce to three
+decimals or better and one sign flip remains — the memo's own income-threshold split, below.
+The figures still unchecked are marked **unverified** rather than deleted.*
 
 ## Verified on the committed panel
 
@@ -32,18 +34,21 @@ figures the re-run did not touch are marked **unverified** rather than deleted.*
 
 ## Unverified — not re-estimated
 
-These were not re-run and should not be quoted without re-estimating them first.
+Narrower than it was: the §4 inequality block has since been recovered and all 13 of its
+published quantities reproduce to four decimals (`docs/RERUN_NOTES.md`, addendum of
+2026-10-19). What is still unchecked:
 
-- **Instrumented β₃ = +1.337\*\*\* (over-identified).** No IV specification was re-run. The
-  report's own IV battery has a first-stage F of 2.8–6.6, below the weak-instrument
-  threshold, so the attenuation story this number carries is not currently supported.
-- **Concentration loop (U32): γ₁ = ∂Sᴾ/∂G = +0.074, θ = −42.47 ⇒ drag = −3.137.** Separate
-  objects from the §4 Gini channel; neither was reproduced. The §4 inequality block is the
-  one part of the paper that does not reproduce at all (`docs/RERUN_NOTES.md`), and recovering
-  its specifications is open work.
+- **Instrumented β₃ = +1.337\*\*\* (over-identified).** This specification was not re-run.
+  What was re-run is the §4 Bartik IV for the inequality channel, whose first-stage F
+  statistics reproduce exactly (2.85 / 4.20 / 6.56 / 5.57 against the report's "4.2, range
+  2.8–6.6") — so the report's grounds for discarding its IVs as weak are confirmed, and the
+  attenuation story this number carries remains unsupported until the β₃ IV itself is
+  estimated.
+- **Concentration loop (U32): γ₁ = ∂Sᴾ/∂G = +0.074, θ = −42.47 ⇒ drag = −3.137.** Not
+  reproduced. These are the top-share (Sᴾ) objects, distinct from the §4 Gini channel's
+  γ₁ = +0.0053 and θ = −153.9, both of which now reproduce.
 - **AI → top-10% income share positive and significant; Gini and labour share null.** Not
-  re-run. Note that on the committed panel the §4 AI→inequality coefficient is a negligible
-  −0.085 (n.s.), opposite in sign to the published +0.005.
+  re-run.
 
 ## Caveats
 
